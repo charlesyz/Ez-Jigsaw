@@ -15,6 +15,7 @@
 		AE3E55251F1550F900956B7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE3E55231F1550F900956B7B /* LaunchScreen.storyboard */; };
 		AE3E55301F1550F900956B7B /* Puzzle_JigsawTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3E552F1F1550F900956B7B /* Puzzle_JigsawTests.swift */; };
 		AE3E553C1F15741500956B7B /* Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3E553B1F15741500956B7B /* Classes.swift */; };
+		AE9C7F8C1F16B380006FFD93 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9C7F8B1F16B380006FFD93 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		AE3E552F1F1550F900956B7B /* Puzzle_JigsawTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Puzzle_JigsawTests.swift; sourceTree = "<group>"; };
 		AE3E55311F1550F900956B7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE3E553B1F15741500956B7B /* Classes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Classes.swift; sourceTree = "<group>"; };
+		AE9C7F8B1F16B380006FFD93 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		AE3E55131F1550F900956B7B /* Puzzle Jigsaw */ = {
 			isa = PBXGroup;
 			children = (
+				AE9C7F8B1F16B380006FFD93 /* Extensions.swift */,
 				AE3E55141F1550F900956B7B /* AppDelegate.swift */,
 				AE3E551C1F1550F900956B7B /* GameViewController.swift */,
 				AE3E551A1F1550F900956B7B /* GameScene.swift */,
@@ -205,6 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE9C7F8C1F16B380006FFD93 /* Extensions.swift in Sources */,
 				AE3E551B1F1550F900956B7B /* GameScene.swift in Sources */,
 				AE3E551D1F1550F900956B7B /* GameViewController.swift in Sources */,
 				AE3E553C1F15741500956B7B /* Classes.swift in Sources */,
@@ -416,6 +420,7 @@
 				AE3E55361F1550F900956B7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AE3E55371F1550F900956B7B /* Build configuration list for PBXNativeTarget "Puzzle JigsawTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +429,7 @@
 				AE3E55391F1550F900956B7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

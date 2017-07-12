@@ -41,8 +41,8 @@
                   symbolName = "Puzzle_Jigsaw.piece.sprite.getter : Swift.Optional&lt;__ObjC.SKSpriteNode&gt;"
                   moduleName = "Puzzle Jigsaw"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/charleszhang/Documents/Github/Puzzle%20Jigsaw/Puzzle%20Jigsaw/Classes.swift"
-                  timestampString = "521510554.716228"
+                  urlString = "file:///Users/charleszhang/Documents/Github/Jigsaw/Puzzle%20Jigsaw/Puzzle%20Jigsaw/Classes.swift"
+                  timestampString = "521586054.440302"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "38"
@@ -56,8 +56,8 @@
                   symbolName = "Puzzle_Jigsaw.piece.sprite.setter : Swift.Optional&lt;__ObjC.SKSpriteNode&gt;"
                   moduleName = "Puzzle Jigsaw"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/charleszhang/Documents/Github/Puzzle%20Jigsaw/Puzzle%20Jigsaw/Classes.swift"
-                  timestampString = "521510554.718394"
+                  urlString = "file:///Users/charleszhang/Documents/Github/Jigsaw/Puzzle%20Jigsaw/Puzzle%20Jigsaw/Classes.swift"
+                  timestampString = "521586054.442398"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "38"
@@ -71,8 +71,8 @@
                   symbolName = "Puzzle_Jigsaw.piece.init () -&gt; Puzzle_Jigsaw.piece"
                   moduleName = "Puzzle Jigsaw"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/charleszhang/Documents/Github/Puzzle%20Jigsaw/Puzzle%20Jigsaw/Classes.swift"
-                  timestampString = "521510554.720508"
+                  urlString = "file:///Users/charleszhang/Documents/Github/Jigsaw/Puzzle%20Jigsaw/Puzzle%20Jigsaw/Classes.swift"
+                  timestampString = "521586054.444792"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "38"
@@ -89,28 +89,124 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Puzzle Jigsaw/GameScene.swift"
-            timestampString = "521511934.496999"
+            timestampString = "521585887.791648"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "setImage()"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "touchesBegan(_:with:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Puzzle Jigsaw/GameScene.swift"
-            timestampString = "521513236.98327"
+            timestampString = "521586053.374838"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "setImage()"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
+            landmarkName = "touchesEnded(_:with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Puzzle Jigsaw/GameScene.swift"
+            timestampString = "521585887.791648"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
+            landmarkName = "touchesBegan(_:with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Puzzle Jigsaw/GameScene.swift"
+            timestampString = "521585887.791648"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
+            landmarkName = "touchesBegan(_:with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Puzzle Jigsaw/GameScene.swift"
+            timestampString = "521586053.374838"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
+            landmarkName = "touchesCancelled(_:with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Puzzle Jigsaw/GameScene.swift"
+            timestampString = "521584749.928221"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "drawPieces()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Puzzle Jigsaw/GameScene.swift"
+            timestampString = "521585868.974467"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "drawPieces()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Puzzle Jigsaw/GameScene.swift"
+            timestampString = "521586206.525802"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
+            landmarkName = "touchesEnded(_:with:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
