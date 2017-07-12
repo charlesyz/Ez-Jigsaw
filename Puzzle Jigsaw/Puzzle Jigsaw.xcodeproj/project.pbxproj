@@ -1,0 +1,431 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AE3E55151F1550F900956B7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3E55141F1550F900956B7B /* AppDelegate.swift */; };
+		AE3E551B1F1550F900956B7B /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3E551A1F1550F900956B7B /* GameScene.swift */; };
+		AE3E551D1F1550F900956B7B /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3E551C1F1550F900956B7B /* GameViewController.swift */; };
+		AE3E55201F1550F900956B7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE3E551E1F1550F900956B7B /* Main.storyboard */; };
+		AE3E55221F1550F900956B7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE3E55211F1550F900956B7B /* Assets.xcassets */; };
+		AE3E55251F1550F900956B7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE3E55231F1550F900956B7B /* LaunchScreen.storyboard */; };
+		AE3E55301F1550F900956B7B /* Puzzle_JigsawTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3E552F1F1550F900956B7B /* Puzzle_JigsawTests.swift */; };
+		AE3E553C1F15741500956B7B /* Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3E553B1F15741500956B7B /* Classes.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AE3E552C1F1550F900956B7B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE3E55091F1550F900956B7B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE3E55101F1550F900956B7B;
+			remoteInfo = "Puzzle Jigsaw";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AE3E55111F1550F900956B7B /* Puzzle Jigsaw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Puzzle Jigsaw.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE3E55141F1550F900956B7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AE3E551A1F1550F900956B7B /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		AE3E551C1F1550F900956B7B /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		AE3E551F1F1550F900956B7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AE3E55211F1550F900956B7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AE3E55241F1550F900956B7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AE3E55261F1550F900956B7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE3E552B1F1550F900956B7B /* Puzzle JigsawTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Puzzle JigsawTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE3E552F1F1550F900956B7B /* Puzzle_JigsawTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Puzzle_JigsawTests.swift; sourceTree = "<group>"; };
+		AE3E55311F1550F900956B7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE3E553B1F15741500956B7B /* Classes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Classes.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AE3E550E1F1550F900956B7B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE3E55281F1550F900956B7B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AE3E55081F1550F900956B7B = {
+			isa = PBXGroup;
+			children = (
+				AE3E55131F1550F900956B7B /* Puzzle Jigsaw */,
+				AE3E552E1F1550F900956B7B /* Puzzle JigsawTests */,
+				AE3E55121F1550F900956B7B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AE3E55121F1550F900956B7B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AE3E55111F1550F900956B7B /* Puzzle Jigsaw.app */,
+				AE3E552B1F1550F900956B7B /* Puzzle JigsawTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AE3E55131F1550F900956B7B /* Puzzle Jigsaw */ = {
+			isa = PBXGroup;
+			children = (
+				AE3E55141F1550F900956B7B /* AppDelegate.swift */,
+				AE3E551C1F1550F900956B7B /* GameViewController.swift */,
+				AE3E551A1F1550F900956B7B /* GameScene.swift */,
+				AE3E553B1F15741500956B7B /* Classes.swift */,
+				AE3E551E1F1550F900956B7B /* Main.storyboard */,
+				AE3E55211F1550F900956B7B /* Assets.xcassets */,
+				AE3E55231F1550F900956B7B /* LaunchScreen.storyboard */,
+				AE3E55261F1550F900956B7B /* Info.plist */,
+			);
+			path = "Puzzle Jigsaw";
+			sourceTree = "<group>";
+		};
+		AE3E552E1F1550F900956B7B /* Puzzle JigsawTests */ = {
+			isa = PBXGroup;
+			children = (
+				AE3E552F1F1550F900956B7B /* Puzzle_JigsawTests.swift */,
+				AE3E55311F1550F900956B7B /* Info.plist */,
+			);
+			path = "Puzzle JigsawTests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AE3E55101F1550F900956B7B /* Puzzle Jigsaw */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE3E55341F1550F900956B7B /* Build configuration list for PBXNativeTarget "Puzzle Jigsaw" */;
+			buildPhases = (
+				AE3E550D1F1550F900956B7B /* Sources */,
+				AE3E550E1F1550F900956B7B /* Frameworks */,
+				AE3E550F1F1550F900956B7B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Puzzle Jigsaw";
+			productName = "Puzzle Jigsaw";
+			productReference = AE3E55111F1550F900956B7B /* Puzzle Jigsaw.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AE3E552A1F1550F900956B7B /* Puzzle JigsawTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE3E55371F1550F900956B7B /* Build configuration list for PBXNativeTarget "Puzzle JigsawTests" */;
+			buildPhases = (
+				AE3E55271F1550F900956B7B /* Sources */,
+				AE3E55281F1550F900956B7B /* Frameworks */,
+				AE3E55291F1550F900956B7B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AE3E552D1F1550F900956B7B /* PBXTargetDependency */,
+			);
+			name = "Puzzle JigsawTests";
+			productName = "Puzzle JigsawTests";
+			productReference = AE3E552B1F1550F900956B7B /* Puzzle JigsawTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AE3E55091F1550F900956B7B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Charles Zhang";
+				TargetAttributes = {
+					AE3E55101F1550F900956B7B = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+					AE3E552A1F1550F900956B7B = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = AE3E55101F1550F900956B7B;
+					};
+				};
+			};
+			buildConfigurationList = AE3E550C1F1550F900956B7B /* Build configuration list for PBXProject "Puzzle Jigsaw" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AE3E55081F1550F900956B7B;
+			productRefGroup = AE3E55121F1550F900956B7B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AE3E55101F1550F900956B7B /* Puzzle Jigsaw */,
+				AE3E552A1F1550F900956B7B /* Puzzle JigsawTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AE3E550F1F1550F900956B7B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE3E55201F1550F900956B7B /* Main.storyboard in Resources */,
+				AE3E55221F1550F900956B7B /* Assets.xcassets in Resources */,
+				AE3E55251F1550F900956B7B /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE3E55291F1550F900956B7B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AE3E550D1F1550F900956B7B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE3E551B1F1550F900956B7B /* GameScene.swift in Sources */,
+				AE3E551D1F1550F900956B7B /* GameViewController.swift in Sources */,
+				AE3E553C1F15741500956B7B /* Classes.swift in Sources */,
+				AE3E55151F1550F900956B7B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE3E55271F1550F900956B7B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE3E55301F1550F900956B7B /* Puzzle_JigsawTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AE3E552D1F1550F900956B7B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AE3E55101F1550F900956B7B /* Puzzle Jigsaw */;
+			targetProxy = AE3E552C1F1550F900956B7B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AE3E551E1F1550F900956B7B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE3E551F1F1550F900956B7B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AE3E55231F1550F900956B7B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE3E55241F1550F900956B7B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AE3E55321F1550F900956B7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AE3E55331F1550F900956B7B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AE3E55351F1550F900956B7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Puzzle Jigsaw/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Puzzle-Jigsaw";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		AE3E55361F1550F900956B7B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Puzzle Jigsaw/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Puzzle-Jigsaw";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		AE3E55381F1550F900956B7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Puzzle JigsawTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Puzzle-JigsawTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Puzzle Jigsaw.app/Puzzle Jigsaw";
+			};
+			name = Debug;
+		};
+		AE3E55391F1550F900956B7B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Puzzle JigsawTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Puzzle-JigsawTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Puzzle Jigsaw.app/Puzzle Jigsaw";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AE3E550C1F1550F900956B7B /* Build configuration list for PBXProject "Puzzle Jigsaw" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE3E55321F1550F900956B7B /* Debug */,
+				AE3E55331F1550F900956B7B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE3E55341F1550F900956B7B /* Build configuration list for PBXNativeTarget "Puzzle Jigsaw" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE3E55351F1550F900956B7B /* Debug */,
+				AE3E55361F1550F900956B7B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AE3E55371F1550F900956B7B /* Build configuration list for PBXNativeTarget "Puzzle JigsawTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE3E55381F1550F900956B7B /* Debug */,
+				AE3E55391F1550F900956B7B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AE3E55091F1550F900956B7B /* Project object */;
+}
