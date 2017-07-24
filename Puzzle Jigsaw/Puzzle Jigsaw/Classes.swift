@@ -32,11 +32,15 @@ class Matrix<T> {
     }
 }
 
-class piece{
-    var correctPosition : CGPoint?
-    var con : ConectionTags?
+struct Piece{
+    var rotation : Int
     var sprite : SKSpriteNode?
-
+    var image = (image: UIImage(), point: CGPoint())
+    
+    init() {
+        rotation = 0;
+        sprite = nil
+    }
 }
 
 struct ConectionTags {

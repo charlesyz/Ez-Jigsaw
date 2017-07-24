@@ -12,13 +12,13 @@ import SpriteKit
 import GameplayKit
 
 
-extension SKNode {
+/*extension SKSpriteNode {
     func bringToFront() {
         guard let parent = parent else {
             print("No Parent")
             return
         }
-        removeFromParent()
+        self.removeFromParent()
         parent.addChild(self)
     }
-}
+}*/
