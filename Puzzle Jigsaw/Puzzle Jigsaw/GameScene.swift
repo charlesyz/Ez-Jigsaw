@@ -139,10 +139,17 @@ class GameScene: SKScene {
                 
                 s.position = CGPoint(x: CGFloat(arc4random_uniform(UInt32(size.width - tileWidth)) + UInt32(tileWidth * 0.5)), y: CGFloat(arc4random_uniform(UInt32((size.height - size.width) * 0.75 - tileHeight)) + UInt32(tileHeight * 0.5 + (size.height - size.width) * 0.25) + 10))
                 
+                
+                
                 //s.position = imageTiles.point[k]
                 
                 pieces[k].sprite = s
                 addChild(pieces[k].sprite!)
+                
+                // put the pieces in random rotations
+                pieces[k].rotation = Int(arc4random_uniform(3))
+                let rotate = SKAction.rotate(byAngle:  CGFloat(pieces[k].rotation) * 1.5707963268, duration: 0)
+                pieces[k].sprite?.run(rotate)
                 k += 1
             }
         }
@@ -152,7 +159,7 @@ class GameScene: SKScene {
     func checkCorrect() -> Bool{
         var isCorrect = true;
         for i in 0..<pieces.count{
-            if pieces[i].sprite?.contains(pieces[i].image.point) == false{
+            if pieces[i].sprite?.contains(pieces[i].image.point) == false || pieces[i].rotation != 0{
                 isCorrect = false;
             }
         }
@@ -187,12 +194,19 @@ class GameScene: SKScene {
         if let touch = touches.first {
             let location = touch.location(in: self)
             for i in stride(from: pieces.count - 1, to: -1, by: -1){
-                if (pieces[i].sprite?.contains(location))! {
+                if (pieces[i].sprite?.contains(location) == true && touch.tapCount == 1 ) {
                     //print("Bring to Front")
                     moveableNode = bringToFront(sprite: pieces[i].sprite!)
                     moveableNode!.position = location
                     break;
                 }
+                else if (pieces[i].sprite?.contains(location) == true && touch.tapCount == 2 ) {
+                    pieces[i].rotation = (pieces[i].rotation + 1) % 4
+                    let rotate = SKAction.rotate(byAngle: 1.5707963268, duration: 0.25)
+                    pieces[i].sprite?.run(rotate)
+                    break;
+                }
+
             }
         }
     }
