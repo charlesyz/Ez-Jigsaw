@@ -25,18 +25,75 @@ class GameScene: SKScene {
     let backLabel = UILabel()
     let doneMessage = UILabel()
 
-    
-    //var grid = Matrix<piece>(rows: hCount, columns: wCount)
     var pieces = [Piece]()
     
     override func didMove(to view: SKView) {
-        backgroundColor = SKColor.lightGray
-        
+        let bg = SKSpriteNode(imageNamed: "backgroundPhoto")
+        bg.size.height = size.height
+        bg.size.width = size.width
+        bg.position = CGPoint(x: 0, y: 0)
+        bg.anchorPoint = CGPoint(x: 0, y: 0)
+        bg.zPosition = -1
+        addChild(bg)
+            
         tileHeight = (size.width - 20) / CGFloat(hCount)
         tileWidth = (size.width - 20) / CGFloat(wCount)
         
         setImage()
+        setPath()
         reset()
+        drawPieces()
+    }
+    
+    
+    
+    func setImage(){
+        
+        let s = SKSpriteNode()
+        s.color = highlightColour
+        s.size = CGSize(width: size.width - 18, height: size.width - 18)
+        s.position = CGPoint(x: size.width * 0.5 , y: size.height - size.width + 9)
+        s.anchorPoint = CGPoint(x: 0.5, y: 0)
+        addChild(s)
+        
+        resetButton = SKSpriteNode()
+        resetButton.color = buttonColour
+        resetButton.size = CGSize(width: size.width * 0.5 - 20, height: (size.height - size.width) * 0.25)
+        resetButton.position = CGPoint(x: 10, y: 10)
+        resetButton.anchorPoint = CGPoint(x: 0, y: 0)
+        resetButton.name = "resetButton"
+        self.addChild(resetButton)
+        
+        backButton = SKSpriteNode()//texture: SKTexture(image: image!))
+        backButton.color = buttonColour
+        backButton.size = CGSize(width: size.width * 0.5 - 20, height: (size.height - size.width) * 0.25)
+        backButton.position = CGPoint(x: size.width * 0.5 + 10, y: 10)
+        backButton.anchorPoint = CGPoint(x: 0, y: 0)
+        backButton.name = "backButton"
+        self.addChild(backButton)
+        
+        resetLabel.backgroundColor = UIColor.clear
+        resetLabel.text = "Restart"
+        resetLabel.textColor = textColour
+        resetLabel.translatesAutoresizingMaskIntoConstraints = false
+        resetLabel.tag = 103
+        resetLabel.frame = CGRect(x: 10, y: size.height - 20 - (size.height - size.width) * 0.125 ,width: size.width * 0.5 - 20, height: 20)
+        resetLabel.textAlignment = NSTextAlignment.center
+        self.view?.addSubview(resetLabel)
+        
+        backLabel.backgroundColor = UIColor.clear
+        backLabel.text = "Back"
+        backLabel.textColor = textColour
+        backLabel.translatesAutoresizingMaskIntoConstraints = false
+        backLabel.tag = 104
+        backLabel.frame = CGRect(x: size.width * 0.5 + 10, y: size.height - 20 - (size.height - size.width) * 0.125,width: size.width * 0.5 - 20, height: 20)
+        backLabel.textAlignment = NSTextAlignment.center
+        self.view?.addSubview(backLabel)
+
+    }
+    func setPath(){
+
+ 
     }
     
     func reset(){
@@ -56,53 +113,6 @@ class GameScene: SKScene {
             p.image.point = imageTiles.1[i]
             pieces.append(p)
         }
-        
-        drawPieces()
-    }
-    
-    func setImage(){
-        
-        let s = SKSpriteNode()
-        s.color = SKColor.darkGray
-        s.size = CGSize(width: size.width - 18, height: size.width - 18)
-        s.position = CGPoint(x: size.width * 0.5 , y: size.height - size.width + 9)
-        s.anchorPoint = CGPoint(x: 0.5, y: 0)
-        addChild(s)
-        
-        resetButton = SKSpriteNode()
-        resetButton.color = SKColor.gray
-        resetButton.size = CGSize(width: size.width * 0.5 - 20, height: (size.height - size.width) * 0.25)
-        resetButton.position = CGPoint(x: 10, y: 10)
-        resetButton.anchorPoint = CGPoint(x: 0, y: 0)
-        resetButton.name = "resetButton"
-        self.addChild(resetButton)
-        
-        backButton = SKSpriteNode()//texture: SKTexture(image: image!))
-        backButton.color = SKColor.gray
-        backButton.size = CGSize(width: size.width * 0.5 - 20, height: (size.height - size.width) * 0.25)
-        backButton.position = CGPoint(x: size.width * 0.5 + 10, y: 10)
-        backButton.anchorPoint = CGPoint(x: 0, y: 0)
-        backButton.name = "backButton"
-        self.addChild(backButton)
-        
-        resetLabel.backgroundColor = UIColor.clear
-        resetLabel.text = "Restart"
-        resetLabel.textColor = UIColor.black
-        resetLabel.translatesAutoresizingMaskIntoConstraints = false
-        resetLabel.tag = 103
-        resetLabel.frame = CGRect(x: 10, y: size.height - 20 - (size.height - size.width) * 0.125 ,width: size.width * 0.5 - 20, height: 20)
-        resetLabel.textAlignment = NSTextAlignment.center
-        self.view?.addSubview(resetLabel)
-        
-        backLabel.backgroundColor = UIColor.clear
-        backLabel.text = "Back"
-        backLabel.textColor = UIColor.black
-        backLabel.translatesAutoresizingMaskIntoConstraints = false
-        backLabel.tag = 104
-        backLabel.frame = CGRect(x: size.width * 0.5 + 10, y: size.height - 20 - (size.height - size.width) * 0.125,width: size.width * 0.5 - 20, height: 20)
-        backLabel.textAlignment = NSTextAlignment.center
-        self.view?.addSubview(backLabel)
-
     }
     
     func cropImage(image: UIImage) -> ([UIImage], [CGPoint]) {
@@ -114,8 +124,7 @@ class GameScene: SKScene {
         for i in 0..<Int(hCount) {
             for j in 0..<Int(wCount) {
                 UIGraphicsBeginImageContextWithOptions(
-                    CGSize(width:sz.width/CGFloat(wCount), height:sz.height/CGFloat(wCount)),
-                    false, 0)
+                    CGSize(width:sz.width/CGFloat(wCount), height:sz.height/CGFloat(wCount)), false, 0)
                 image.draw(at:CGPoint(x: -sz.width/CGFloat(wCount)*CGFloat(j), y: -sz.height/CGFloat(hCount)*CGFloat(i)))
                 let tmpImg = UIGraphicsGetImageFromCurrentImageContext()
                 UIGraphicsEndImageContext()
@@ -128,30 +137,39 @@ class GameScene: SKScene {
     }
     
     func drawPieces(){
-        var k = 0
-        for _ in 0..<Int(hCount) {
-            for _ in 0..<Int(wCount) {
-                let s = SKSpriteNode(texture: SKTexture(image: pieces[k].image.image))
-                s.size = CGSize(width: tileWidth, height: tileHeight)
-                s.name = "\(k)"
-                
-                // put the pieces in random positions in the bottom box
-                
-                s.position = CGPoint(x: CGFloat(arc4random_uniform(UInt32(size.width - tileWidth)) + UInt32(tileWidth * 0.5)), y: CGFloat(arc4random_uniform(UInt32((size.height - size.width) * 0.75 - tileHeight)) + UInt32(tileHeight * 0.5 + (size.height - size.width) * 0.25) + 10))
-                
-                
-                
-                //s.position = imageTiles.point[k]
-                
-                pieces[k].sprite = s
-                addChild(pieces[k].sprite!)
-                
-                // put the pieces in random rotations
-                pieces[k].rotation = Int(arc4random_uniform(3))
-                let rotate = SKAction.rotate(byAngle:  CGFloat(pieces[k].rotation) * 1.5707963268, duration: 0)
-                pieces[k].sprite?.run(rotate)
-                k += 1
+        let time = UInt32(NSDate().timeIntervalSinceReferenceDate)
+        srand48(Int(time))
+        for k in 0..<Int(hCount * wCount) {
+            let s = SKSpriteNode(texture: SKTexture(image: pieces[k].image.image))
+            s.size = CGSize(width: tileWidth, height: tileHeight)
+            s.name = "\(k)"
+            
+            var fix : CGFloat = 0
+            if size.height - size.width < size.width * 0.5{
+                fix = size.width
             }
+            
+            // put the pieces in random positions in the bottom box
+            s.position = CGPoint(x: CGFloat(arc4random_uniform(UInt32(size.width - tileWidth)) + UInt32(tileWidth * 0.5)), y: CGFloat(arc4random_uniform(UInt32((size.height - size.width) * 0.75 + fix - tileHeight)) + UInt32(tileHeight * 0.5 + (size.height - size.width) * 0.25) + 10))
+            
+            /*let posX = CGFloat(arc4random_uniform(UInt32(size.width - tileWidth)) + UInt32(tileWidth * 0.5))
+             //CGFloat(drand48() * Float(size.width - tileWidth) + Float(tileWidth * 0.5))
+            let a = arc4random_uniform(UInt32((size.height - size.width) * 0.75 + size.width - tileHeight))
+            let b = UInt32(tileHeight * 0.5 + (size.height - size.width) * 0.25) + 10
+            let posY = CGFloat(a + b)
+            //CGFloat(drand48() * Float((size.height - size.width) * 0.75 - tileHeight) + Float(tileHeight * 0.5 + (size.height - size.width) * 0.25 + 10.0))*/
+            //s.position = CGPoint(x: posX, y: posY)
+ 
+            
+            //s.position = imageTiles.point[k]
+            
+            pieces[k].sprite = s
+            addChild(pieces[k].sprite!)
+            
+            // put the pieces in random rotations
+            pieces[k].rotation = Int(arc4random_uniform(3))
+            let rotate = SKAction.rotate(byAngle:  CGFloat(pieces[k].rotation) * 1.5707963268, duration: 0)
+            pieces[k].sprite?.run(rotate)
         }
         
 
@@ -274,7 +292,7 @@ class GameScene: SKScene {
                 doneMessage.backgroundColor = UIColor.clear
                 doneMessage.text = "Puzzle Complete!"
                 doneMessage.font = doneMessage.font.withSize(30)
-                doneMessage.textColor = UIColor.black
+                doneMessage.textColor = textColour
                 doneMessage.translatesAutoresizingMaskIntoConstraints = false
                 doneMessage.tag = 105
                 doneMessage.frame = CGRect(x: 10, y: size.width + 10,width: size.width - 20, height: 40)

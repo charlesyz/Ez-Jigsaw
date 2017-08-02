@@ -14,6 +14,10 @@ var image = UIImage(named: "defaultPhoto")
 var hCount = 3                                              // # pieces in the puzzle height wise
 var wCount = 3                                              // # pieces in the puzzle length wise
 var controller = GameViewController() 
+let highlightColour = UIColor(red:0.13, green:0.27, blue:0.37, alpha:1.0)
+let buttonColour = UIColor(red:0.01, green:0.08, blue:0.11, alpha:1.0)
+let textColour = UIColor(red:0.65, green:0.88, blue:0.98, alpha:1.0)
+let backgroundColour = UIColor(red:0.01, green:0.10, blue:0.15, alpha:1.0)
 
 class MenuScene: SKScene , UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     var imageButton = SKSpriteNode()
@@ -23,7 +27,13 @@ class MenuScene: SKScene , UIImagePickerControllerDelegate, UINavigationControll
     var buttonLabel = UILabel()
     
     override func didMove(to view: SKView) {
-        backgroundColor = SKColor.lightGray
+        let bg = SKSpriteNode(imageNamed: "backgroundPhoto")
+        bg.size.height = size.height
+        bg.size.width = size.width
+        bg.position = CGPoint(x: 0, y: 0)
+        bg.anchorPoint = CGPoint(x: 0, y: 0)
+        bg.zPosition = -1
+        addChild(bg)
         initObjects()
     }
     
@@ -36,7 +46,7 @@ class MenuScene: SKScene , UIImagePickerControllerDelegate, UINavigationControll
     
     func initObjects(){
         imageButton = SKSpriteNode(texture: SKTexture(image: image!))
-        imageButton.color = SKColor.darkGray
+        imageButton.color = buttonColour
         imageButton.size = CGSize(width: size.width - 20, height: size.width - 20)
         imageButton.position = CGPoint(x: size.width * 0.5 , y: size.height - size.width + 10)
         imageButton.anchorPoint = CGPoint(x: 0.5, y: 0)
@@ -44,7 +54,7 @@ class MenuScene: SKScene , UIImagePickerControllerDelegate, UINavigationControll
         self.addChild(imageButton)
         
         startButton = SKSpriteNode()//texture: SKTexture(image: image!))
-        startButton.color = SKColor.gray
+        startButton.color = buttonColour
         startButton.size = CGSize(width: size.width - 50, height: size.height - size.width - 120)
         startButton.position = CGPoint(x: size.width * 0.5, y: size.height - size.width - 10)
         startButton.anchorPoint = CGPoint(x: 0.5, y: 1)
@@ -53,10 +63,10 @@ class MenuScene: SKScene , UIImagePickerControllerDelegate, UINavigationControll
         
         buttonLabel.backgroundColor = UIColor.clear
         buttonLabel.text = "Press to Start"
-        buttonLabel.textColor = UIColor.black
+        buttonLabel.textColor = textColour
         buttonLabel.translatesAutoresizingMaskIntoConstraints = false
         buttonLabel.tag = 102
-        buttonLabel.frame = CGRect(x: 20, y: size.height - size.width + (size.height - size.width) * 0.5,width: size.width - 40, height: 50)
+        buttonLabel.frame = CGRect(x: 20, y: size.height - 130 - (size.height - size.width - 120) * 0.5, width: size.width - 40, height: 50)
         buttonLabel.textAlignment = NSTextAlignment.center
         self.view?.addSubview(buttonLabel)
         
@@ -72,7 +82,7 @@ class MenuScene: SKScene , UIImagePickerControllerDelegate, UINavigationControll
 
         sliderLabel.backgroundColor = UIColor.clear
         sliderLabel.text = "Dimensions: \(hCount) x \(wCount)"
-        sliderLabel.textColor = UIColor.black
+        sliderLabel.textColor = textColour
         sliderLabel.translatesAutoresizingMaskIntoConstraints = false
         sliderLabel.tag = 101
         sliderLabel.frame = CGRect(x: 20, y: size.height - 100 ,width: size.width - 40, height: 50)
@@ -89,18 +99,23 @@ class MenuScene: SKScene , UIImagePickerControllerDelegate, UINavigationControll
         if (sz.width < sz.height){
             bounds = sz.width
         }
-        
+        // crop
         UIGraphicsBeginImageContextWithOptions(CGSize(width:bounds, height:bounds),false, 0)
-        if (bounds == sz.width){
+        if (sz.width < sz.height){
             image.draw(at:CGPoint(x: 0, y: -(sz.height - sz.width) / 2))
         }
         else{
-            image.draw(at:CGPoint(x: -(sz.width - sz.height) / 2, y: 0))
+        image.draw(at:CGPoint(x: -(sz.width - sz.height) / 2, y: 0))
         }
-        
-        let tmpImg = UIGraphicsGetImageFromCurrentImageContext()
+        var tmpImg = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-                
+        
+        // resize
+        UIGraphicsBeginImageContextWithOptions(CGSize(width:1000, height:1000),false, 0)
+        tmpImg?.draw(in: CGRect(x: 0, y: 0, width: 1000, height: 1000))
+        tmpImg = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
         return tmpImg!
     }
     // Image Picker
@@ -119,13 +134,21 @@ class MenuScene: SKScene , UIImagePickerControllerDelegate, UINavigationControll
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         image = info[UIImagePickerControllerOriginalImage] as? UIImage
-        image = cropSquare(image: image!)
-        imageButton.texture = SKTexture(image: image!)
-
         controller.dismiss(animated: true, completion: nil)
+        image = cropSquare(image: image!)
+        imageButton.removeFromParent()
+        imageButton = SKSpriteNode(texture: SKTexture(image: image!))
+        imageButton.color = buttonColour
+        imageButton.size = CGSize(width: size.width - 20, height: size.width - 20)
+        imageButton.position = CGPoint(x: size.width * 0.5 , y: size.height - size.width + 10)
+        imageButton.anchorPoint = CGPoint(x: 0.5, y: 0)
+        imageButton.name = "imageButton"
+        self.addChild(imageButton)
+        //imageButton.texture = SKTexture(image: image!)
+
     }
     
-    // detec touches
+    // detect touches
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = touches.first
         let touchLocation = touch!.location(in: self)

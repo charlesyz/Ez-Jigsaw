@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D54F7D8D083C65586DB91DD /* libPods-Puzzle Jigsaw.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 494B12DAECF7E67358D9E0AD /* libPods-Puzzle Jigsaw.a */; };
+		4EF1914CE467A1591FF02A02 /* libPods-Puzzle JigsawTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C28AAFBB8118C6DE5542AD /* libPods-Puzzle JigsawTests.a */; };
+		AE0110A91F2974CB0010E768 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE0110A81F2974CB0010E768 /* Assets.xcassets */; };
 		AE3E55151F1550F900956B7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3E55141F1550F900956B7B /* AppDelegate.swift */; };
 		AE3E551D1F1550F900956B7B /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3E551C1F1550F900956B7B /* GameViewController.swift */; };
 		AE3E55201F1550F900956B7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE3E551E1F1550F900956B7B /* Main.storyboard */; };
-		AE3E55221F1550F900956B7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE3E55211F1550F900956B7B /* Assets.xcassets */; };
 		AE3E55251F1550F900956B7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE3E55231F1550F900956B7B /* LaunchScreen.storyboard */; };
 		AE3E55301F1550F900956B7B /* Puzzle_JigsawTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3E552F1F1550F900956B7B /* Puzzle_JigsawTests.swift */; };
 		AE3E553C1F15741500956B7B /* Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3E553B1F15741500956B7B /* Classes.swift */; };
@@ -30,11 +32,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		42C28AAFBB8118C6DE5542AD /* libPods-Puzzle JigsawTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Puzzle JigsawTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		494B12DAECF7E67358D9E0AD /* libPods-Puzzle Jigsaw.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Puzzle Jigsaw.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		59F55C6362FB98329949DE88 /* Pods-Puzzle JigsawTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Puzzle JigsawTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Puzzle JigsawTests/Pods-Puzzle JigsawTests.debug.xcconfig"; sourceTree = "<group>"; };
+		871DAD9946880B1370B7923C /* Pods-Puzzle Jigsaw.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Puzzle Jigsaw.release.xcconfig"; path = "Pods/Target Support Files/Pods-Puzzle Jigsaw/Pods-Puzzle Jigsaw.release.xcconfig"; sourceTree = "<group>"; };
+		AE0110A81F2974CB0010E768 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE3E55111F1550F900956B7B /* Puzzle Jigsaw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Puzzle Jigsaw.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE3E55141F1550F900956B7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE3E551C1F1550F900956B7B /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		AE3E551F1F1550F900956B7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AE3E55211F1550F900956B7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE3E55241F1550F900956B7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE3E55261F1550F900956B7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE3E552B1F1550F900956B7B /* Puzzle JigsawTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Puzzle JigsawTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,6 +51,8 @@
 		AE9C7F8B1F16B380006FFD93 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		AEE90E0E1F255B630043C475 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		AEE90E101F255B700043C475 /* Puzzle Jigsaw */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Puzzle Jigsaw"; sourceTree = "<group>"; };
+		E6F74DD83B8ABD30B79CB672 /* Pods-Puzzle JigsawTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Puzzle JigsawTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Puzzle JigsawTests/Pods-Puzzle JigsawTests.release.xcconfig"; sourceTree = "<group>"; };
+		F5EC8B824C48A507621EA7DB /* Pods-Puzzle Jigsaw.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Puzzle Jigsaw.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Puzzle Jigsaw/Pods-Puzzle Jigsaw.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D54F7D8D083C65586DB91DD /* libPods-Puzzle Jigsaw.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,12 +68,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EF1914CE467A1591FF02A02 /* libPods-Puzzle JigsawTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1471FD007FE40680D866585A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				494B12DAECF7E67358D9E0AD /* libPods-Puzzle Jigsaw.a */,
+				42C28AAFBB8118C6DE5542AD /* libPods-Puzzle JigsawTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4EE8BD2BB40A6E774D1B678F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F5EC8B824C48A507621EA7DB /* Pods-Puzzle Jigsaw.debug.xcconfig */,
+				871DAD9946880B1370B7923C /* Pods-Puzzle Jigsaw.release.xcconfig */,
+				59F55C6362FB98329949DE88 /* Pods-Puzzle JigsawTests.debug.xcconfig */,
+				E6F74DD83B8ABD30B79CB672 /* Pods-Puzzle JigsawTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		AE3E55081F1550F900956B7B = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +102,8 @@
 				AE3E55131F1550F900956B7B /* Puzzle Jigsaw */,
 				AE3E552E1F1550F900956B7B /* Puzzle JigsawTests */,
 				AE3E55121F1550F900956B7B /* Products */,
+				4EE8BD2BB40A6E774D1B678F /* Pods */,
+				1471FD007FE40680D866585A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,6 +119,7 @@
 		AE3E55131F1550F900956B7B /* Puzzle Jigsaw */ = {
 			isa = PBXGroup;
 			children = (
+				AE0110A81F2974CB0010E768 /* Assets.xcassets */,
 				AEE90E0E1F255B630043C475 /* GameScene.swift */,
 				AE9C7F8B1F16B380006FFD93 /* Extensions.swift */,
 				AE3E55141F1550F900956B7B /* AppDelegate.swift */,
@@ -94,7 +127,6 @@
 				AE6FFC741F17E3BE001AF5D6 /* MenuScene.swift */,
 				AE3E553B1F15741500956B7B /* Classes.swift */,
 				AE3E551E1F1550F900956B7B /* Main.storyboard */,
-				AE3E55211F1550F900956B7B /* Assets.xcassets */,
 				AE3E55231F1550F900956B7B /* LaunchScreen.storyboard */,
 				AE3E55261F1550F900956B7B /* Info.plist */,
 			);
@@ -117,9 +149,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AE3E55341F1550F900956B7B /* Build configuration list for PBXNativeTarget "Puzzle Jigsaw" */;
 			buildPhases = (
+				0CF06910E005650F2F751923 /* [CP] Check Pods Manifest.lock */,
 				AE3E550D1F1550F900956B7B /* Sources */,
 				AE3E550E1F1550F900956B7B /* Frameworks */,
 				AE3E550F1F1550F900956B7B /* Resources */,
+				B9983741D6C11C238F3FB1FD /* [CP] Embed Pods Frameworks */,
+				8DA2A6B307D7FE4F1D356324 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -134,9 +169,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AE3E55371F1550F900956B7B /* Build configuration list for PBXNativeTarget "Puzzle JigsawTests" */;
 			buildPhases = (
+				8393D356E89A43B1D5760EC5 /* [CP] Check Pods Manifest.lock */,
 				AE3E55271F1550F900956B7B /* Sources */,
 				AE3E55281F1550F900956B7B /* Frameworks */,
 				AE3E55291F1550F900956B7B /* Resources */,
+				FCCD778E76E867B3AB7B5CBD /* [CP] Embed Pods Frameworks */,
+				A2346E034990F2F2E23C81CE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -194,7 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE3E55201F1550F900956B7B /* Main.storyboard in Resources */,
-				AE3E55221F1550F900956B7B /* Assets.xcassets in Resources */,
+				AE0110A91F2974CB0010E768 /* Assets.xcassets in Resources */,
 				AE3E55251F1550F900956B7B /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -207,6 +245,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0CF06910E005650F2F751923 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8393D356E89A43B1D5760EC5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8DA2A6B307D7FE4F1D356324 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Puzzle Jigsaw/Pods-Puzzle Jigsaw-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2346E034990F2F2E23C81CE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Puzzle JigsawTests/Pods-Puzzle JigsawTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9983741D6C11C238F3FB1FD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Puzzle Jigsaw/Pods-Puzzle Jigsaw-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FCCD778E76E867B3AB7B5CBD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Puzzle JigsawTests/Pods-Puzzle JigsawTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AE3E550D1F1550F900956B7B /* Sources */ = {
@@ -357,6 +488,7 @@
 		};
 		AE3E55351F1550F900956B7B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5EC8B824C48A507621EA7DB /* Pods-Puzzle Jigsaw.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Puzzle Jigsaw/Info.plist";
@@ -369,6 +501,7 @@
 		};
 		AE3E55361F1550F900956B7B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 871DAD9946880B1370B7923C /* Pods-Puzzle Jigsaw.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Puzzle Jigsaw/Info.plist";
@@ -381,6 +514,7 @@
 		};
 		AE3E55381F1550F900956B7B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59F55C6362FB98329949DE88 /* Pods-Puzzle JigsawTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -395,6 +529,7 @@
 		};
 		AE3E55391F1550F900956B7B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6F74DD83B8ABD30B79CB672 /* Pods-Puzzle JigsawTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
