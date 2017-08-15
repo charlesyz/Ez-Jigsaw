@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>PocketSVG.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-Puzzle Jigsaw.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -19,20 +14,25 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>PuzzleMaker.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>424A39CCE2468DFF8158D0DC23D95F3E</key>
+		<key>09E995EE05F134D16C6BB544CDC1280F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>516C44CEAEEDBFD17014C7BB80AD8CE8</key>
+		<key>9476D2A8E47B64B112EC7F5C47C06436</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B3F7375A2A5C6DA5FCEA85EB68B1D5AD</key>
+		<key>B2132FA4EF38610D988A32E76DB0032F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

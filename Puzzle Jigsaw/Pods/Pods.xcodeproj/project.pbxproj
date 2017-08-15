@@ -7,213 +7,287 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0FCD9A2299CB8CF9D6989A78CE0C257A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC2770B482BFE91273C8560623F1422C /* QuartzCore.framework */; };
-		14B09E9680145877098C6D761EA4219D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F9A0E952988935C32EDDB1429D7133 /* Foundation.framework */; };
-		178D62CFB568C5470847CBD187204962 /* Pods-Puzzle JigsawTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C23D131E5D127EB4B64821414B9BFC /* Pods-Puzzle JigsawTests-dummy.m */; };
-		68B97D00E683FA43BA336E263D853A3E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F9A0E952988935C32EDDB1429D7133 /* Foundation.framework */; };
-		E67ED25B3ADD7104984484EF5B3AD7B4 /* Pods-Puzzle Jigsaw-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 101E764159D34D3AF82569B80D475740 /* Pods-Puzzle Jigsaw-dummy.m */; };
-		FB7A8D6CC9B9677AD2D71A321F6F2E96 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F9A0E952988935C32EDDB1429D7133 /* Foundation.framework */; };
+		064EAB7C2B840F3FFAC6BE34ABB7930B /* Pods-Puzzle Jigsaw-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 329FD3B0C56FB60D23BDEFBD5932AF39 /* Pods-Puzzle Jigsaw-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D57ABFAB9195811CDDE2BD114EE003A /* PuzzleMaker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 675B4C76E2710B69155B0CF6B59278E5 /* PuzzleMaker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		12401DC99FD81A0CAAC93452F0783437 /* PuzzleElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC043E4CE0C70C6374B966D8DBCB7EE3 /* PuzzleElement.swift */; };
+		15409798255C8AA1AC38E755C96E0E1A /* Pods-Puzzle Jigsaw-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 34CA947E2839B9A6D41E0D189D875177 /* Pods-Puzzle Jigsaw-dummy.m */; };
+		1AB6960E409C8035F332BD29FA871D81 /* Pods-Puzzle JigsawTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 25BF0A32C36A3462A0B8422E31166575 /* Pods-Puzzle JigsawTests-dummy.m */; };
+		274CC858769B915A62E1B780F6589335 /* PuzzleMaker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF2BAB5E1343BF014BEE3A51238F970 /* PuzzleMaker-dummy.m */; };
+		2AD893BA3CDF7B0B9ADF99D37FF2CB0C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		2F0E6716AB6DD867211429609F0648C4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		39803C15B77230CB4A23A08A58AD2942 /* PuzzleUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768FD906C003895DD12F65B44D3851F6 /* PuzzleUnit.swift */; };
+		3B574CF26779742FD90361BFDD841AED /* PuzzleUnitFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E1575F47A59E73427BA494B43B9E68 /* PuzzleUnitFactory.swift */; };
+		4CF938B05EE297D4A28A5D4A46CE49D8 /* CubicBezierCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3542442FBB9C96B96B41B29B4F7E128 /* CubicBezierCurve.swift */; };
+		825D1EE5114A9B82A457BDB308FE2259 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDE58813BFBE2F8C23D8CB6FF264D4B /* Double+Extensions.swift */; };
+		83310E89BA33071E0BBD15803EC03042 /* UIBezierPath+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833D6FA42C9A5556C997513AB6DB17DB /* UIBezierPath+Extensions.swift */; };
+		854601E29145DAC41DAA5D88AF3D3B10 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819122D577C4FB6313145240737F2F07 /* UIImage+Extensions.swift */; };
+		8C2BCB7D8270A88D79468C9BF5B1E0A8 /* PuzzleMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA73A4DEAF73610237BFE608C784B25E /* PuzzleMaker.swift */; };
+		C3E584C2DD476626CD3A348B2FEF405C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		CBDAAD2D386B6663D2AAB2804384D6D1 /* Segment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2952C00695BAFC009FBED39818BE82 /* Segment.swift */; };
+		D2FDC546C6D0D16C9A07D73995A1362B /* Bool+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9847C49A4FDCDE4256FD1D82A3B92A7D /* Bool+Extensions.swift */; };
+		E47FDF70FEE61F80BF45E1031B1B7AE9 /* Pods-Puzzle JigsawTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AEC6C87306F22A7ED853D405510E8068 /* Pods-Puzzle JigsawTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5FB3302F0B21BE64C616B246851A96AA /* PBXContainerItemProxy */ = {
+		E2B1E7A83F351E47198E3BF5B6B17389 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 516C44CEAEEDBFD17014C7BB80AD8CE8;
-			remoteInfo = PocketSVG;
+			remoteGlobalIDString = B2132FA4EF38610D988A32E76DB0032F;
+			remoteInfo = PuzzleMaker;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1012B19599E0FBBCF1E9894A7D708A06 /* Pods-Puzzle Jigsaw-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Puzzle Jigsaw-acknowledgements.plist"; sourceTree = "<group>"; };
-		101E764159D34D3AF82569B80D475740 /* Pods-Puzzle Jigsaw-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Puzzle Jigsaw-dummy.m"; sourceTree = "<group>"; };
-		1BD22CD346DF705D66315961B223B1A2 /* Pods-Puzzle Jigsaw.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Puzzle Jigsaw.debug.xcconfig"; sourceTree = "<group>"; };
-		272AEEA04F09B766E64D143ECB4BF43F /* Pods-Puzzle Jigsaw-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Puzzle Jigsaw-resources.sh"; sourceTree = "<group>"; };
-		37463E73F944387271E6CA64E9F2BEDF /* libPocketSVG.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPocketSVG.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		4CB24EA18FC8D6C5E551A3A4089AC919 /* Pods-Puzzle JigsawTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Puzzle JigsawTests-frameworks.sh"; sourceTree = "<group>"; };
-		4F85FE103C411D9FD501082073AD350A /* Pods-Puzzle JigsawTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Puzzle JigsawTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		54F9A0E952988935C32EDDB1429D7133 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		57853EEA817C233C9FDD25FECBA19605 /* Pods-Puzzle Jigsaw.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Puzzle Jigsaw.release.xcconfig"; sourceTree = "<group>"; };
-		6F1923A0104A8B9DF319972CCA7DF895 /* Pods-Puzzle JigsawTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Puzzle JigsawTests-resources.sh"; sourceTree = "<group>"; };
-		7C01961162A62F231ED883BFD34286D5 /* Pods-Puzzle JigsawTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Puzzle JigsawTests.release.xcconfig"; sourceTree = "<group>"; };
-		916B4FD7C6C3AC7736EC36FC056A2145 /* libPods-Puzzle Jigsaw.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Puzzle Jigsaw.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9C7B1C5850D456ACEBCC1EB8C9469A1E /* Pods-Puzzle JigsawTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Puzzle JigsawTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		AA93B77DF82D03BB81EB2AD3D7CF5DEB /* Pods-Puzzle Jigsaw-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Puzzle Jigsaw-acknowledgements.markdown"; sourceTree = "<group>"; };
-		C44B4A5B0FD8E6B691356DB0B93D0FB9 /* Pods-Puzzle JigsawTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Puzzle JigsawTests.debug.xcconfig"; sourceTree = "<group>"; };
-		D5F586A5A5021F050C2DED4475D710C8 /* libPods-Puzzle JigsawTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Puzzle JigsawTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DFF31153A89A6F04F4C756AC5081156B /* Pods-Puzzle Jigsaw-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Puzzle Jigsaw-frameworks.sh"; sourceTree = "<group>"; };
-		F5C23D131E5D127EB4B64821414B9BFC /* Pods-Puzzle JigsawTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Puzzle JigsawTests-dummy.m"; sourceTree = "<group>"; };
-		FC2770B482BFE91273C8560623F1422C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		021D875F06EAAF392C4EF67CBD80ECE5 /* Pods-Puzzle Jigsaw-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Puzzle Jigsaw-acknowledgements.markdown"; sourceTree = "<group>"; };
+		0AB365E5CD5929AC9A07892B7908676B /* PuzzleMaker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PuzzleMaker.xcconfig; sourceTree = "<group>"; };
+		17F2D6A7755BE1FB63472F10C2714222 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C930DC170BDEF289A1939517803FC57 /* Pods-Puzzle JigsawTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Puzzle JigsawTests.debug.xcconfig"; sourceTree = "<group>"; };
+		25BF0A32C36A3462A0B8422E31166575 /* Pods-Puzzle JigsawTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Puzzle JigsawTests-dummy.m"; sourceTree = "<group>"; };
+		329FD3B0C56FB60D23BDEFBD5932AF39 /* Pods-Puzzle Jigsaw-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Puzzle Jigsaw-umbrella.h"; sourceTree = "<group>"; };
+		34CA947E2839B9A6D41E0D189D875177 /* Pods-Puzzle Jigsaw-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Puzzle Jigsaw-dummy.m"; sourceTree = "<group>"; };
+		3B2952C00695BAFC009FBED39818BE82 /* Segment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Segment.swift; path = Sources/Segment.swift; sourceTree = "<group>"; };
+		40E1575F47A59E73427BA494B43B9E68 /* PuzzleUnitFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PuzzleUnitFactory.swift; path = Sources/PuzzleUnitFactory.swift; sourceTree = "<group>"; };
+		4DD1AEEAB8A3A5ADCA55EE349299E4DE /* Pods-Puzzle Jigsaw-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Puzzle Jigsaw-resources.sh"; sourceTree = "<group>"; };
+		4FDE58813BFBE2F8C23D8CB6FF264D4B /* Double+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Double+Extensions.swift"; path = "Sources/Double+Extensions.swift"; sourceTree = "<group>"; };
+		59FCF821C4C33D94E685E3BC9ACC055D /* Pods-Puzzle JigsawTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Puzzle JigsawTests-resources.sh"; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		675B4C76E2710B69155B0CF6B59278E5 /* PuzzleMaker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PuzzleMaker-umbrella.h"; sourceTree = "<group>"; };
+		67C6F0F0AF0A2B2BABD73DF579C50597 /* PuzzleMaker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PuzzleMaker-prefix.pch"; sourceTree = "<group>"; };
+		69B30C527F1555590C3DB541639EC9AE /* Pods-Puzzle Jigsaw.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Puzzle Jigsaw.release.xcconfig"; sourceTree = "<group>"; };
+		6C7DF0DE3AC19C161BAF08CCBE273253 /* Pods-Puzzle JigsawTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Puzzle JigsawTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		6EFCAC2FE2C33B796AB823BE836B2082 /* Pods-Puzzle JigsawTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Puzzle JigsawTests.modulemap"; sourceTree = "<group>"; };
+		768FD906C003895DD12F65B44D3851F6 /* PuzzleUnit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PuzzleUnit.swift; path = Sources/PuzzleUnit.swift; sourceTree = "<group>"; };
+		819122D577C4FB6313145240737F2F07 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Extensions.swift"; path = "Sources/UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		833D6FA42C9A5556C997513AB6DB17DB /* UIBezierPath+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIBezierPath+Extensions.swift"; path = "Sources/UIBezierPath+Extensions.swift"; sourceTree = "<group>"; };
+		8FFB8577434229E9BFF67E152E3DE3A8 /* Pods-Puzzle JigsawTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Puzzle JigsawTests.release.xcconfig"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		95337DC7F8841A12B143FF2D5278F9DA /* PuzzleMaker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PuzzleMaker.framework; path = PuzzleMaker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9847C49A4FDCDE4256FD1D82A3B92A7D /* Bool+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Bool+Extensions.swift"; path = "Sources/Bool+Extensions.swift"; sourceTree = "<group>"; };
+		9883F19BEC00E6501F56D38490CF9232 /* PuzzleMaker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = PuzzleMaker.modulemap; sourceTree = "<group>"; };
+		995B31E57B0E6A3715820ADB186E4E13 /* Pods-Puzzle Jigsaw.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Puzzle Jigsaw.modulemap"; sourceTree = "<group>"; };
+		9B5917E55872F5B65BE53E61AA288650 /* Pods-Puzzle JigsawTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Puzzle JigsawTests-frameworks.sh"; sourceTree = "<group>"; };
+		A1788069C7B9E569A96258C8049B03BE /* Pods-Puzzle Jigsaw-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Puzzle Jigsaw-acknowledgements.plist"; sourceTree = "<group>"; };
+		AC043E4CE0C70C6374B966D8DBCB7EE3 /* PuzzleElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PuzzleElement.swift; path = Sources/PuzzleElement.swift; sourceTree = "<group>"; };
+		AEC6C87306F22A7ED853D405510E8068 /* Pods-Puzzle JigsawTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Puzzle JigsawTests-umbrella.h"; sourceTree = "<group>"; };
+		B2127EBB9B5B4200EC2B9D52F1616E07 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA73A4DEAF73610237BFE608C784B25E /* PuzzleMaker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PuzzleMaker.swift; path = Sources/PuzzleMaker.swift; sourceTree = "<group>"; };
+		BCF2BAB5E1343BF014BEE3A51238F970 /* PuzzleMaker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PuzzleMaker-dummy.m"; sourceTree = "<group>"; };
+		C70672E04785413A760B7E11BAF6563E /* Pods-Puzzle Jigsaw-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Puzzle Jigsaw-frameworks.sh"; sourceTree = "<group>"; };
+		E805E92AED7A73AA9B0902110A5067F4 /* Pods-Puzzle Jigsaw.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Puzzle Jigsaw.debug.xcconfig"; sourceTree = "<group>"; };
+		EDD5663073C24F83818DC17808FCEEA9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3542442FBB9C96B96B41B29B4F7E128 /* CubicBezierCurve.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CubicBezierCurve.swift; path = Sources/CubicBezierCurve.swift; sourceTree = "<group>"; };
+		F3A8DF876061A97A350C0A64BF24D418 /* Pods-Puzzle JigsawTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Puzzle JigsawTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F4C340723E02A98D5D9F66267B8228CB /* Pods_Puzzle_JigsawTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Puzzle_JigsawTests.framework; path = "Pods-Puzzle JigsawTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC02B452B4216E10AF10B30B9A76817F /* Pods_Puzzle_Jigsaw.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Puzzle_Jigsaw.framework; path = "Pods-Puzzle Jigsaw.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2DB7BBDED4BC0D4718A8581CFAC5D38E /* Frameworks */ = {
+		5B2A612BA686CAB693A15D094E223925 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB7A8D6CC9B9677AD2D71A321F6F2E96 /* Foundation.framework in Frameworks */,
+				C3E584C2DD476626CD3A348B2FEF405C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		784B290946C43457AD5877E90455F92E /* Frameworks */ = {
+		68F00669BE755A729F7E88B4DBBFF97C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14B09E9680145877098C6D761EA4219D /* Foundation.framework in Frameworks */,
+				2F0E6716AB6DD867211429609F0648C4 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FE81C176B3FF8CBC02639461E5F755B1 /* Frameworks */ = {
+		858EF6789632757E3B0B8F87694BC3D1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68B97D00E683FA43BA336E263D853A3E /* Foundation.framework in Frameworks */,
-				0FCD9A2299CB8CF9D6989A78CE0C257A /* QuartzCore.framework in Frameworks */,
+				2AD893BA3CDF7B0B9ADF99D37FF2CB0C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1A6353DB412BD9ACB9FD4D4672396EE8 /* Pods-Puzzle JigsawTests */ = {
+		10F386B4B3E382F7FC0916872BDE32BD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				9C7B1C5850D456ACEBCC1EB8C9469A1E /* Pods-Puzzle JigsawTests-acknowledgements.markdown */,
-				4F85FE103C411D9FD501082073AD350A /* Pods-Puzzle JigsawTests-acknowledgements.plist */,
-				F5C23D131E5D127EB4B64821414B9BFC /* Pods-Puzzle JigsawTests-dummy.m */,
-				4CB24EA18FC8D6C5E551A3A4089AC919 /* Pods-Puzzle JigsawTests-frameworks.sh */,
-				6F1923A0104A8B9DF319972CCA7DF895 /* Pods-Puzzle JigsawTests-resources.sh */,
-				C44B4A5B0FD8E6B691356DB0B93D0FB9 /* Pods-Puzzle JigsawTests.debug.xcconfig */,
-				7C01961162A62F231ED883BFD34286D5 /* Pods-Puzzle JigsawTests.release.xcconfig */,
-			);
-			name = "Pods-Puzzle JigsawTests";
-			path = "Target Support Files/Pods-Puzzle JigsawTests";
-			sourceTree = "<group>";
-		};
-		29A2564912C51A239D8600ED5D47E1CB /* Pods */ = {
-			isa = PBXGroup;
-			children = (
+				7574A88B60986D5C628737BB4EB52797 /* PuzzleMaker */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+		2AEF56F36C78BB3A28A25D4D846A61B6 /* Pods-Puzzle Jigsaw */ = {
 			isa = PBXGroup;
 			children = (
-				978007DCB56F415BE390E0F949D4D4E5 /* iOS */,
+				EDD5663073C24F83818DC17808FCEEA9 /* Info.plist */,
+				995B31E57B0E6A3715820ADB186E4E13 /* Pods-Puzzle Jigsaw.modulemap */,
+				021D875F06EAAF392C4EF67CBD80ECE5 /* Pods-Puzzle Jigsaw-acknowledgements.markdown */,
+				A1788069C7B9E569A96258C8049B03BE /* Pods-Puzzle Jigsaw-acknowledgements.plist */,
+				34CA947E2839B9A6D41E0D189D875177 /* Pods-Puzzle Jigsaw-dummy.m */,
+				C70672E04785413A760B7E11BAF6563E /* Pods-Puzzle Jigsaw-frameworks.sh */,
+				4DD1AEEAB8A3A5ADCA55EE349299E4DE /* Pods-Puzzle Jigsaw-resources.sh */,
+				329FD3B0C56FB60D23BDEFBD5932AF39 /* Pods-Puzzle Jigsaw-umbrella.h */,
+				E805E92AED7A73AA9B0902110A5067F4 /* Pods-Puzzle Jigsaw.debug.xcconfig */,
+				69B30C527F1555590C3DB541639EC9AE /* Pods-Puzzle Jigsaw.release.xcconfig */,
 			);
-			name = Frameworks;
+			name = "Pods-Puzzle Jigsaw";
+			path = "Target Support Files/Pods-Puzzle Jigsaw";
+			sourceTree = "<group>";
+		};
+		7574A88B60986D5C628737BB4EB52797 /* PuzzleMaker */ = {
+			isa = PBXGroup;
+			children = (
+				9847C49A4FDCDE4256FD1D82A3B92A7D /* Bool+Extensions.swift */,
+				F3542442FBB9C96B96B41B29B4F7E128 /* CubicBezierCurve.swift */,
+				4FDE58813BFBE2F8C23D8CB6FF264D4B /* Double+Extensions.swift */,
+				AC043E4CE0C70C6374B966D8DBCB7EE3 /* PuzzleElement.swift */,
+				BA73A4DEAF73610237BFE608C784B25E /* PuzzleMaker.swift */,
+				768FD906C003895DD12F65B44D3851F6 /* PuzzleUnit.swift */,
+				40E1575F47A59E73427BA494B43B9E68 /* PuzzleUnitFactory.swift */,
+				3B2952C00695BAFC009FBED39818BE82 /* Segment.swift */,
+				833D6FA42C9A5556C997513AB6DB17DB /* UIBezierPath+Extensions.swift */,
+				819122D577C4FB6313145240737F2F07 /* UIImage+Extensions.swift */,
+				A9BD273C557715576FB88B9746AC1110 /* Support Files */,
+			);
+			name = PuzzleMaker;
+			path = PuzzleMaker;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				29A2564912C51A239D8600ED5D47E1CB /* Pods */,
-				EEF901A4F830523AC8DDAEDEA6EE2BE5 /* Products */,
-				8054D61FAE6B3EFF16B0F672D0622719 /* Targets Support Files */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				10F386B4B3E382F7FC0916872BDE32BD /* Pods */,
+				975C120B11B6B6EFB07BC64E3EDD25CB /* Products */,
+				C77DBE19D4D5533DBAF96BC484E093EB /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		8054D61FAE6B3EFF16B0F672D0622719 /* Targets Support Files */ = {
+		8931486D3846067524FB7F597B058B42 /* Pods-Puzzle JigsawTests */ = {
 			isa = PBXGroup;
 			children = (
-				EECB6610A50F9F7876A15DE3FB7456B6 /* Pods-Puzzle Jigsaw */,
-				1A6353DB412BD9ACB9FD4D4672396EE8 /* Pods-Puzzle JigsawTests */,
+				17F2D6A7755BE1FB63472F10C2714222 /* Info.plist */,
+				6EFCAC2FE2C33B796AB823BE836B2082 /* Pods-Puzzle JigsawTests.modulemap */,
+				F3A8DF876061A97A350C0A64BF24D418 /* Pods-Puzzle JigsawTests-acknowledgements.markdown */,
+				6C7DF0DE3AC19C161BAF08CCBE273253 /* Pods-Puzzle JigsawTests-acknowledgements.plist */,
+				25BF0A32C36A3462A0B8422E31166575 /* Pods-Puzzle JigsawTests-dummy.m */,
+				9B5917E55872F5B65BE53E61AA288650 /* Pods-Puzzle JigsawTests-frameworks.sh */,
+				59FCF821C4C33D94E685E3BC9ACC055D /* Pods-Puzzle JigsawTests-resources.sh */,
+				AEC6C87306F22A7ED853D405510E8068 /* Pods-Puzzle JigsawTests-umbrella.h */,
+				1C930DC170BDEF289A1939517803FC57 /* Pods-Puzzle JigsawTests.debug.xcconfig */,
+				8FFB8577434229E9BFF67E152E3DE3A8 /* Pods-Puzzle JigsawTests.release.xcconfig */,
+			);
+			name = "Pods-Puzzle JigsawTests";
+			path = "Target Support Files/Pods-Puzzle JigsawTests";
+			sourceTree = "<group>";
+		};
+		975C120B11B6B6EFB07BC64E3EDD25CB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FC02B452B4216E10AF10B30B9A76817F /* Pods_Puzzle_Jigsaw.framework */,
+				F4C340723E02A98D5D9F66267B8228CB /* Pods_Puzzle_JigsawTests.framework */,
+				95337DC7F8841A12B143FF2D5278F9DA /* PuzzleMaker.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A9BD273C557715576FB88B9746AC1110 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B2127EBB9B5B4200EC2B9D52F1616E07 /* Info.plist */,
+				9883F19BEC00E6501F56D38490CF9232 /* PuzzleMaker.modulemap */,
+				0AB365E5CD5929AC9A07892B7908676B /* PuzzleMaker.xcconfig */,
+				BCF2BAB5E1343BF014BEE3A51238F970 /* PuzzleMaker-dummy.m */,
+				67C6F0F0AF0A2B2BABD73DF579C50597 /* PuzzleMaker-prefix.pch */,
+				675B4C76E2710B69155B0CF6B59278E5 /* PuzzleMaker-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PuzzleMaker";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C77DBE19D4D5533DBAF96BC484E093EB /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2AEF56F36C78BB3A28A25D4D846A61B6 /* Pods-Puzzle Jigsaw */,
+				8931486D3846067524FB7F597B058B42 /* Pods-Puzzle JigsawTests */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		978007DCB56F415BE390E0F949D4D4E5 /* iOS */ = {
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				54F9A0E952988935C32EDDB1429D7133 /* Foundation.framework */,
-				FC2770B482BFE91273C8560623F1422C /* QuartzCore.framework */,
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		EECB6610A50F9F7876A15DE3FB7456B6 /* Pods-Puzzle Jigsaw */ = {
-			isa = PBXGroup;
-			children = (
-				AA93B77DF82D03BB81EB2AD3D7CF5DEB /* Pods-Puzzle Jigsaw-acknowledgements.markdown */,
-				1012B19599E0FBBCF1E9894A7D708A06 /* Pods-Puzzle Jigsaw-acknowledgements.plist */,
-				101E764159D34D3AF82569B80D475740 /* Pods-Puzzle Jigsaw-dummy.m */,
-				DFF31153A89A6F04F4C756AC5081156B /* Pods-Puzzle Jigsaw-frameworks.sh */,
-				272AEEA04F09B766E64D143ECB4BF43F /* Pods-Puzzle Jigsaw-resources.sh */,
-				1BD22CD346DF705D66315961B223B1A2 /* Pods-Puzzle Jigsaw.debug.xcconfig */,
-				57853EEA817C233C9FDD25FECBA19605 /* Pods-Puzzle Jigsaw.release.xcconfig */,
-			);
-			name = "Pods-Puzzle Jigsaw";
-			path = "Target Support Files/Pods-Puzzle Jigsaw";
-			sourceTree = "<group>";
-		};
-		EEF901A4F830523AC8DDAEDEA6EE2BE5 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				37463E73F944387271E6CA64E9F2BEDF /* libPocketSVG.a */,
-				916B4FD7C6C3AC7736EC36FC056A2145 /* libPods-Puzzle Jigsaw.a */,
-				D5F586A5A5021F050C2DED4475D710C8 /* libPods-Puzzle JigsawTests.a */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		569DE19283914D5A22FB5CE9E8E12FCE /* Headers */ = {
+		AC68DC8DE0EB61775398A62E6208118B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E47FDF70FEE61F80BF45E1031B1B7AE9 /* Pods-Puzzle JigsawTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE04E879D9A3B2E5552A22C868956AA7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D57ABFAB9195811CDDE2BD114EE003A /* PuzzleMaker-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9788490DF5353D74A8760C128AAA2A1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				064EAB7C2B840F3FFAC6BE34ABB7930B /* Pods-Puzzle Jigsaw-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		424A39CCE2468DFF8158D0DC23D95F3E /* Pods-Puzzle Jigsaw */ = {
+		09E995EE05F134D16C6BB544CDC1280F /* Pods-Puzzle Jigsaw */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 01CD63BEDFD952D60283760A34412284 /* Build configuration list for PBXNativeTarget "Pods-Puzzle Jigsaw" */;
+			buildConfigurationList = 62342AF9817306FD173CDD81878CED68 /* Build configuration list for PBXNativeTarget "Pods-Puzzle Jigsaw" */;
 			buildPhases = (
-				BCCB2FB00E4F7F1EDB33735796641495 /* Sources */,
-				2DB7BBDED4BC0D4718A8581CFAC5D38E /* Frameworks */,
+				D108B6FD71FE9E88F51401391CB24A50 /* Sources */,
+				5B2A612BA686CAB693A15D094E223925 /* Frameworks */,
+				C9788490DF5353D74A8760C128AAA2A1 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				8F4CBE736496A44E18DE207D0963DB71 /* PBXTargetDependency */,
+				077BAAA437E02A4AC1D4DCF63846989F /* PBXTargetDependency */,
 			);
 			name = "Pods-Puzzle Jigsaw";
 			productName = "Pods-Puzzle Jigsaw";
-			productReference = 916B4FD7C6C3AC7736EC36FC056A2145 /* libPods-Puzzle Jigsaw.a */;
-			productType = "com.apple.product-type.library.static";
+			productReference = FC02B452B4216E10AF10B30B9A76817F /* Pods_Puzzle_Jigsaw.framework */;
+			productType = "com.apple.product-type.framework";
 		};
-		516C44CEAEEDBFD17014C7BB80AD8CE8 /* PocketSVG */ = {
+		9476D2A8E47B64B112EC7F5C47C06436 /* Pods-Puzzle JigsawTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5B5FE191B95DE182D1E8A014E87ACB6A /* Build configuration list for PBXNativeTarget "PocketSVG" */;
+			buildConfigurationList = FBB8EDC3FC861AEE978050B04F75A872 /* Build configuration list for PBXNativeTarget "Pods-Puzzle JigsawTests" */;
 			buildPhases = (
-				5D913E284B1CF9D0286AACAE00E2EAAB /* Sources */,
-				FE81C176B3FF8CBC02639461E5F755B1 /* Frameworks */,
-				569DE19283914D5A22FB5CE9E8E12FCE /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = PocketSVG;
-			productName = PocketSVG;
-			productReference = 37463E73F944387271E6CA64E9F2BEDF /* libPocketSVG.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		B3F7375A2A5C6DA5FCEA85EB68B1D5AD /* Pods-Puzzle JigsawTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D925CC5F45E3B53B05BB8488EFB5AC3A /* Build configuration list for PBXNativeTarget "Pods-Puzzle JigsawTests" */;
-			buildPhases = (
-				AAF61243013A0625B334325A41AE7607 /* Sources */,
-				784B290946C43457AD5877E90455F92E /* Frameworks */,
+				9310A8F2269FB86D280361767A28BD39 /* Sources */,
+				858EF6789632757E3B0B8F87694BC3D1 /* Frameworks */,
+				AC68DC8DE0EB61775398A62E6208118B /* Headers */,
 			);
 			buildRules = (
 			);
@@ -221,8 +295,25 @@
 			);
 			name = "Pods-Puzzle JigsawTests";
 			productName = "Pods-Puzzle JigsawTests";
-			productReference = D5F586A5A5021F050C2DED4475D710C8 /* libPods-Puzzle JigsawTests.a */;
-			productType = "com.apple.product-type.library.static";
+			productReference = F4C340723E02A98D5D9F66267B8228CB /* Pods_Puzzle_JigsawTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B2132FA4EF38610D988A32E76DB0032F /* PuzzleMaker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F30207DDF493AB5BBFB10B8D47DB7349 /* Build configuration list for PBXNativeTarget "PuzzleMaker" */;
+			buildPhases = (
+				6F0E35AE10A2C0F039E3243BD3DC3F5B /* Sources */,
+				68F00669BE755A729F7E88B4DBBFF97C /* Frameworks */,
+				AE04E879D9A3B2E5552A22C868956AA7 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PuzzleMaker;
+			productName = PuzzleMaker;
+			productReference = 95337DC7F8841A12B143FF2D5278F9DA /* PuzzleMaker.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -241,53 +332,133 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = EEF901A4F830523AC8DDAEDEA6EE2BE5 /* Products */;
+			productRefGroup = 975C120B11B6B6EFB07BC64E3EDD25CB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				516C44CEAEEDBFD17014C7BB80AD8CE8 /* PocketSVG */,
-				424A39CCE2468DFF8158D0DC23D95F3E /* Pods-Puzzle Jigsaw */,
-				B3F7375A2A5C6DA5FCEA85EB68B1D5AD /* Pods-Puzzle JigsawTests */,
+				09E995EE05F134D16C6BB544CDC1280F /* Pods-Puzzle Jigsaw */,
+				9476D2A8E47B64B112EC7F5C47C06436 /* Pods-Puzzle JigsawTests */,
+				B2132FA4EF38610D988A32E76DB0032F /* PuzzleMaker */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5D913E284B1CF9D0286AACAE00E2EAAB /* Sources */ = {
+		6F0E35AE10A2C0F039E3243BD3DC3F5B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2FDC546C6D0D16C9A07D73995A1362B /* Bool+Extensions.swift in Sources */,
+				4CF938B05EE297D4A28A5D4A46CE49D8 /* CubicBezierCurve.swift in Sources */,
+				825D1EE5114A9B82A457BDB308FE2259 /* Double+Extensions.swift in Sources */,
+				12401DC99FD81A0CAAC93452F0783437 /* PuzzleElement.swift in Sources */,
+				274CC858769B915A62E1B780F6589335 /* PuzzleMaker-dummy.m in Sources */,
+				8C2BCB7D8270A88D79468C9BF5B1E0A8 /* PuzzleMaker.swift in Sources */,
+				39803C15B77230CB4A23A08A58AD2942 /* PuzzleUnit.swift in Sources */,
+				3B574CF26779742FD90361BFDD841AED /* PuzzleUnitFactory.swift in Sources */,
+				CBDAAD2D386B6663D2AAB2804384D6D1 /* Segment.swift in Sources */,
+				83310E89BA33071E0BBD15803EC03042 /* UIBezierPath+Extensions.swift in Sources */,
+				854601E29145DAC41DAA5D88AF3D3B10 /* UIImage+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AAF61243013A0625B334325A41AE7607 /* Sources */ = {
+		9310A8F2269FB86D280361767A28BD39 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				178D62CFB568C5470847CBD187204962 /* Pods-Puzzle JigsawTests-dummy.m in Sources */,
+				1AB6960E409C8035F332BD29FA871D81 /* Pods-Puzzle JigsawTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BCCB2FB00E4F7F1EDB33735796641495 /* Sources */ = {
+		D108B6FD71FE9E88F51401391CB24A50 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E67ED25B3ADD7104984484EF5B3AD7B4 /* Pods-Puzzle Jigsaw-dummy.m in Sources */,
+				15409798255C8AA1AC38E755C96E0E1A /* Pods-Puzzle Jigsaw-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		8F4CBE736496A44E18DE207D0963DB71 /* PBXTargetDependency */ = {
+		077BAAA437E02A4AC1D4DCF63846989F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = PocketSVG;
-			target = 516C44CEAEEDBFD17014C7BB80AD8CE8 /* PocketSVG */;
-			targetProxy = 5FB3302F0B21BE64C616B246851A96AA /* PBXContainerItemProxy */;
+			name = PuzzleMaker;
+			target = B2132FA4EF38610D988A32E76DB0032F /* PuzzleMaker */;
+			targetProxy = E2B1E7A83F351E47198E3BF5B6B17389 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		1A01546D411FA2B94EFDAD277F0EC6B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0AB365E5CD5929AC9A07892B7908676B /* PuzzleMaker.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PuzzleMaker/PuzzleMaker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PuzzleMaker/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PuzzleMaker/PuzzleMaker.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = PuzzleMaker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		336458B9CDFC84F4AC3E36D3A458E9E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0AB365E5CD5929AC9A07892B7908676B /* PuzzleMaker.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PuzzleMaker/PuzzleMaker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PuzzleMaker/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PuzzleMaker/PuzzleMaker.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = PuzzleMaker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		4E487F173E6C9664F4E9E26B9635D23C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -336,97 +507,77 @@
 			};
 			name = Debug;
 		};
-		6E34386A673E2EB6547CB3289DD92A42 /* Debug */ = {
+		A8A4E4BABD7B2CD6D8AF1807335DC2BB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C44B4A5B0FD8E6B691356DB0B93D0FB9 /* Pods-Puzzle JigsawTests.debug.xcconfig */;
+			baseConfigurationReference = 8FFB8577434229E9BFF67E152E3DE3A8 /* Pods-Puzzle JigsawTests.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		7BE0B583392228D0E27F82909BC97BEA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/PocketSVG/PocketSVG-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-Puzzle JigsawTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		7DCB074B744CB4D60A1FAA90C8725E5F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/PocketSVG/PocketSVG-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		BBE6CEF0919B1B7F97A4BB6C8275CE09 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7C01961162A62F231ED883BFD34286D5 /* Pods-Puzzle JigsawTests.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Puzzle JigsawTests/Pods-Puzzle JigsawTests.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Pods_Puzzle_JigsawTests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		B3DEE8478968F0830D060B43BB783D87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C930DC170BDEF289A1939517803FC57 /* Pods-Puzzle JigsawTests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Puzzle JigsawTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Puzzle JigsawTests/Pods-Puzzle JigsawTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Puzzle_JigsawTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		BDD0139D6EB93FA375F887ABD62DAB2E /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -472,64 +623,86 @@
 			};
 			name = Release;
 		};
-		E66747E9A81E32398BEEBDCDDAB05223 /* Release */ = {
+		E1AFFB40E1D8E433018E85FC8288D6DA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 57853EEA817C233C9FDD25FECBA19605 /* Pods-Puzzle Jigsaw.release.xcconfig */;
+			baseConfigurationReference = 69B30C527F1555590C3DB541639EC9AE /* Pods-Puzzle Jigsaw.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Puzzle Jigsaw/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Puzzle Jigsaw/Pods-Puzzle Jigsaw.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Pods_Puzzle_Jigsaw;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		E7F429BEFC2387D0148B1427E7FE1747 /* Debug */ = {
+		F4F0143F273B3F581F50610C12138D7F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1BD22CD346DF705D66315961B223B1A2 /* Pods-Puzzle Jigsaw.debug.xcconfig */;
+			baseConfigurationReference = E805E92AED7A73AA9B0902110A5067F4 /* Pods-Puzzle Jigsaw.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Puzzle Jigsaw/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Puzzle Jigsaw/Pods-Puzzle Jigsaw.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Pods_Puzzle_Jigsaw;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		01CD63BEDFD952D60283760A34412284 /* Build configuration list for PBXNativeTarget "Pods-Puzzle Jigsaw" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E7F429BEFC2387D0148B1427E7FE1747 /* Debug */,
-				E66747E9A81E32398BEEBDCDDAB05223 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -539,20 +712,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5B5FE191B95DE182D1E8A014E87ACB6A /* Build configuration list for PBXNativeTarget "PocketSVG" */ = {
+		62342AF9817306FD173CDD81878CED68 /* Build configuration list for PBXNativeTarget "Pods-Puzzle Jigsaw" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7DCB074B744CB4D60A1FAA90C8725E5F /* Debug */,
-				7BE0B583392228D0E27F82909BC97BEA /* Release */,
+				F4F0143F273B3F581F50610C12138D7F /* Debug */,
+				E1AFFB40E1D8E433018E85FC8288D6DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D925CC5F45E3B53B05BB8488EFB5AC3A /* Build configuration list for PBXNativeTarget "Pods-Puzzle JigsawTests" */ = {
+		F30207DDF493AB5BBFB10B8D47DB7349 /* Build configuration list for PBXNativeTarget "PuzzleMaker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6E34386A673E2EB6547CB3289DD92A42 /* Debug */,
-				BBE6CEF0919B1B7F97A4BB6C8275CE09 /* Release */,
+				1A01546D411FA2B94EFDAD277F0EC6B7 /* Debug */,
+				336458B9CDFC84F4AC3E36D3A458E9E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FBB8EDC3FC861AEE978050B04F75A872 /* Build configuration list for PBXNativeTarget "Pods-Puzzle JigsawTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3DEE8478968F0830D060B43BB783D87 /* Debug */,
+				A8A4E4BABD7B2CD6D8AF1807335DC2BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

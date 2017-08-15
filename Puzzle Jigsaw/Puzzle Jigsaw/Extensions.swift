@@ -11,30 +11,112 @@ import UIKit
 import SpriteKit
 import GameplayKit
 
-extension UIColor{
-    func HexToColor(hexString: String, alpha:CGFloat? = 1.0) -> UIColor {
-        // Convert hex string to an integer
-        let hexint = Int(self.intFromHexString(hexStr: hexString))
-        let red = CGFloat((hexint & 0xff0000) >> 16) / 255.0
-        let green = CGFloat((hexint & 0xff00) >> 8) / 255.0
-        let blue = CGFloat((hexint & 0xff) >> 0) / 255.0
-        let alpha = alpha!
-        // Create color object, specifying alpha as well
-        let color = UIColor(red: red, green: green, blue: blue, alpha: alpha)
-        return color
-    }
-    
-    func intFromHexString(hexStr: String) -> UInt32 {
-        var hexInt: UInt32 = 0
-        // Create scanner
-        let scanner: Scanner = Scanner(string: hexStr)
-        // Tell scanner to skip the # character
-        scanner.charactersToBeSkipped = NSCharacterSet(charactersIn: "#") as CharacterSet
-        // Scan hex value
-        scanner.scanHexInt32(&hexInt)
-        return hexInt
+
+extension UIImage {
+    class func image(from layer: CALayer) -> UIImage? {
+        
+        UIGraphicsBeginImageContextWithOptions(layer.bounds.size,
+                                               layer.isOpaque, UIScreen.main.scale)
+        
+        // Don't proceed unless we have context
+        guard let context = UIGraphicsGetCurrentContext() else {
+            UIGraphicsEndImageContext()
+            return nil
+        }
+        
+        layer.render(in: context)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return image
     }
 }
+
+extension UIImage {
+    /*func getPixelColor(point: CGPoint) -> UIColor {
+        
+        let pixelData = self.cgImage!.dataProvider!.data
+        let data: UnsafePointer<UInt8> = CFDataGetBytePtr(pixelData)
+        
+        let pixelInfo: Int = ((Int(self.size.width) * Int(point.y)) + Int(point.x)) * 4
+        
+        let r = CGFloat(data[pixelInfo]) / CGFloat(255.0)
+        let g = CGFloat(data[pixelInfo+1]) / CGFloat(255.0)
+        let b = CGFloat(data[pixelInfo+2]) / CGFloat(255.0)
+        let a = CGFloat(data[pixelInfo+3]) / CGFloat(255.0)
+        
+        return UIColor(red: r, green: g, blue: b, alpha: a)
+        
+    }*/
+    func getPixelColor(point: CGPoint) -> UIColor {
+        let cgImage = self.cgImage
+        
+        let pixelData = self.cgImage!.dataProvider!.data
+        let data: UnsafePointer<UInt8> = CFDataGetBytePtr(pixelData)
+        
+        let alphaInfo = cgImage!.alphaInfo
+        assert(alphaInfo == .premultipliedFirst || alphaInfo == .first || alphaInfo == .noneSkipFirst, "This routine expects alpha to be first component")
+        
+        let byteOrder = cgImage!.bitmapInfo.rawValue & CGBitmapInfo.byteOrderMask.rawValue
+        assert(byteOrder == CGBitmapInfo.byteOrder32Little.rawValue, "This routine expects little-endian 32bit format")
+        
+        let bytesPerRow = cgImage!.bytesPerRow
+        let pixelInfo = Int(point.y) * bytesPerRow + Int(point.x) * 4;
+        
+        let a = CGFloat(data[pixelInfo+3]) / CGFloat(255.0)
+        let r = CGFloat(data[pixelInfo+2]) / CGFloat(255.0)
+        let g = CGFloat(data[pixelInfo+1]) / CGFloat(255.0)
+        let b = CGFloat(data[pixelInfo  ]) / CGFloat(255.0)
+        
+        return UIColor(red: r, green: g, blue: b, alpha: a)
+    }
+    func getPixelAlpha(pos: CGPoint) -> CGFloat {
+        
+        let pixelData = self.cgImage!.dataProvider!.data
+        let data: UnsafePointer<UInt8> = CFDataGetBytePtr(pixelData)
+        
+        let alphaInfo = cgImage!.alphaInfo
+        assert(alphaInfo == .premultipliedFirst || alphaInfo == .first || alphaInfo == .noneSkipFirst, "This routine expects alpha to be first component")
+        
+        let byteOrder = cgImage!.bitmapInfo.rawValue & CGBitmapInfo.byteOrderMask.rawValue
+        assert(byteOrder == CGBitmapInfo.byteOrder32Little.rawValue, "This routine expects little-endian 32bit format")
+        
+        let bytesPerRow = cgImage!.bytesPerRow
+        let pixelInfo = Int(pos.y) * bytesPerRow + Int(pos.x) * 4;
+        
+        return CGFloat(data[pixelInfo+3]) / CGFloat(255.0)
+
+    }
+    
+}
+
+public extension UIImage {
+    public convenience init?(color: UIColor, size: CGSize = CGSize(width: 1, height: 1)) {
+        let rect = CGRect(origin: .zero, size: size)
+        UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)
+        color.setFill()
+        UIRectFill(rect)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        guard let cgImage = image?.cgImage else { return nil }
+        self.init(cgImage: cgImage)
+    }
+}
+
+extension CGFloat {
+    func round(nearest: CGFloat) -> CGFloat {
+        let n = 1/nearest
+        let numberToRound = self * n
+        return numberToRound.rounded() / n
+    }
+    
+    func floor(nearest: CGFloat) -> CGFloat {
+        let intDiv = CGFloat(Int(self / nearest))
+        return intDiv * nearest
+    }
+}
+
 
 /*extension SKSpriteNode {
     func bringToFront() {

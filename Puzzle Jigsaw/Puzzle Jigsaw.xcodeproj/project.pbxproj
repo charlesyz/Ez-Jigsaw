@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4D54F7D8D083C65586DB91DD /* libPods-Puzzle Jigsaw.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 494B12DAECF7E67358D9E0AD /* libPods-Puzzle Jigsaw.a */; };
-		4EF1914CE467A1591FF02A02 /* libPods-Puzzle JigsawTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C28AAFBB8118C6DE5542AD /* libPods-Puzzle JigsawTests.a */; };
+		453BC4920257061A88A15D1F /* Pods_Puzzle_JigsawTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 229D0774F70DC25AE1F27D00 /* Pods_Puzzle_JigsawTests.framework */; };
 		AE0110A91F2974CB0010E768 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE0110A81F2974CB0010E768 /* Assets.xcassets */; };
 		AE3E55151F1550F900956B7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3E55141F1550F900956B7B /* AppDelegate.swift */; };
 		AE3E551D1F1550F900956B7B /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3E551C1F1550F900956B7B /* GameViewController.swift */; };
@@ -16,9 +15,12 @@
 		AE3E55251F1550F900956B7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE3E55231F1550F900956B7B /* LaunchScreen.storyboard */; };
 		AE3E55301F1550F900956B7B /* Puzzle_JigsawTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3E552F1F1550F900956B7B /* Puzzle_JigsawTests.swift */; };
 		AE3E553C1F15741500956B7B /* Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3E553B1F15741500956B7B /* Classes.swift */; };
+		AE3EBB341F3520430070F00D /* PuzzleMaker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEA02A711F34108F00D2809C /* PuzzleMaker.framework */; };
+		AE3EBB351F3520430070F00D /* PuzzleMaker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AEA02A711F34108F00D2809C /* PuzzleMaker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AE6FFC751F17E3BE001AF5D6 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6FFC741F17E3BE001AF5D6 /* MenuScene.swift */; };
 		AE9C7F8C1F16B380006FFD93 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9C7F8B1F16B380006FFD93 /* Extensions.swift */; };
 		AEE90E0F1F255B630043C475 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE90E0E1F255B630043C475 /* GameScene.swift */; };
+		E67B52956FE961A11E5D2568 /* Pods_Puzzle_Jigsaw.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE14FD15E5D31AEF12D11238 /* Pods_Puzzle_Jigsaw.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,9 +33,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		AE3EBB361F3520430070F00D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AE3EBB351F3520430070F00D /* PuzzleMaker.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		42C28AAFBB8118C6DE5542AD /* libPods-Puzzle JigsawTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Puzzle JigsawTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		494B12DAECF7E67358D9E0AD /* libPods-Puzzle Jigsaw.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Puzzle Jigsaw.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		229D0774F70DC25AE1F27D00 /* Pods_Puzzle_JigsawTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Puzzle_JigsawTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		59F55C6362FB98329949DE88 /* Pods-Puzzle JigsawTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Puzzle JigsawTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Puzzle JigsawTests/Pods-Puzzle JigsawTests.debug.xcconfig"; sourceTree = "<group>"; };
 		871DAD9946880B1370B7923C /* Pods-Puzzle Jigsaw.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Puzzle Jigsaw.release.xcconfig"; path = "Pods/Target Support Files/Pods-Puzzle Jigsaw/Pods-Puzzle Jigsaw.release.xcconfig"; sourceTree = "<group>"; };
 		AE0110A81F2974CB0010E768 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,8 +64,10 @@
 		AE3E553B1F15741500956B7B /* Classes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Classes.swift; sourceTree = "<group>"; };
 		AE6FFC741F17E3BE001AF5D6 /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
 		AE9C7F8B1F16B380006FFD93 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		AEA02A711F34108F00D2809C /* PuzzleMaker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PuzzleMaker.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Puzzle_Jigsaw-ehwunntwggalytcehelpwgfzfned/Build/Products/Debug-iphonesimulator/PuzzleMaker/PuzzleMaker.framework"; sourceTree = "<group>"; };
 		AEE90E0E1F255B630043C475 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		AEE90E101F255B700043C475 /* Puzzle Jigsaw */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Puzzle Jigsaw"; sourceTree = "<group>"; };
+		BE14FD15E5D31AEF12D11238 /* Pods_Puzzle_Jigsaw.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Puzzle_Jigsaw.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6F74DD83B8ABD30B79CB672 /* Pods-Puzzle JigsawTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Puzzle JigsawTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Puzzle JigsawTests/Pods-Puzzle JigsawTests.release.xcconfig"; sourceTree = "<group>"; };
 		F5EC8B824C48A507621EA7DB /* Pods-Puzzle Jigsaw.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Puzzle Jigsaw.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Puzzle Jigsaw/Pods-Puzzle Jigsaw.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -60,7 +77,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D54F7D8D083C65586DB91DD /* libPods-Puzzle Jigsaw.a in Frameworks */,
+				E67B52956FE961A11E5D2568 /* Pods_Puzzle_Jigsaw.framework in Frameworks */,
+				AE3EBB341F3520430070F00D /* PuzzleMaker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,7 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EF1914CE467A1591FF02A02 /* libPods-Puzzle JigsawTests.a in Frameworks */,
+				453BC4920257061A88A15D1F /* Pods_Puzzle_JigsawTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,8 +96,9 @@
 		1471FD007FE40680D866585A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				494B12DAECF7E67358D9E0AD /* libPods-Puzzle Jigsaw.a */,
-				42C28AAFBB8118C6DE5542AD /* libPods-Puzzle JigsawTests.a */,
+				AEA02A711F34108F00D2809C /* PuzzleMaker.framework */,
+				BE14FD15E5D31AEF12D11238 /* Pods_Puzzle_Jigsaw.framework */,
+				229D0774F70DC25AE1F27D00 /* Pods_Puzzle_JigsawTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -155,6 +174,7 @@
 				AE3E550F1F1550F900956B7B /* Resources */,
 				B9983741D6C11C238F3FB1FD /* [CP] Embed Pods Frameworks */,
 				8DA2A6B307D7FE4F1D356324 /* [CP] Copy Pods Resources */,
+				AE3EBB361F3520430070F00D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -432,7 +452,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -477,7 +497,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

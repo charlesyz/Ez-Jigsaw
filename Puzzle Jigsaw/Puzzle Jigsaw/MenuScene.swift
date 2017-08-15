@@ -111,8 +111,8 @@ class MenuScene: SKScene , UIImagePickerControllerDelegate, UINavigationControll
         UIGraphicsEndImageContext()
         
         // resize
-        UIGraphicsBeginImageContextWithOptions(CGSize(width:1000, height:1000),false, 0)
-        tmpImg?.draw(in: CGRect(x: 0, y: 0, width: 1000, height: 1000))
+        UIGraphicsBeginImageContextWithOptions(CGSize(width:size.width - 20, height:size.width - 20),false, 0)
+        tmpImg?.draw(in: CGRect(x: 0, y: 0, width: size.width - 20, height: size.width - 20))
         tmpImg = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
