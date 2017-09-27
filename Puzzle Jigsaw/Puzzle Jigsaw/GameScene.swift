@@ -13,31 +13,31 @@ import PuzzleMaker
 
 class GameScene: SKScene {
     
-    //let image = UIImage(named: "imageCar")      // defaut image
     var tileHeight : CGFloat = 0                // size of each tile - to be calculated later
     var tileWidth : CGFloat = 0
     var tabSize : CGFloat = 0
-    var smallPiece : CGFloat = 0                // size of each tile - to be calculated later
+    var smallPiece : CGFloat = 0                // size of each different puzzle piece - to be calculated later
     var midPiece : CGFloat = 0
     var bigPiece : CGFloat = 0
     
-    let tinyNum : CGFloat = 0.000000000001
+    let tinyNum : CGFloat = 0.000000000001      // for sprite positioning
     var zPos : CGFloat = 0.000000000001
     var moveableNode : SKNode?                  // for click and drag
     
+    // UI elements
     var resetButton = SKSpriteNode()
     var backButton = SKSpriteNode()
     let resetLabel = UILabel()
     let backLabel = UILabel()
     let doneMessage = UILabel()
 
-    
     var tiles:[UIImage] = []
     var points:[CGPoint] = []
     var pieces = [Piece]()
     
     
     override func didMove(to view: SKView) {
+        // set background
         let bg = SKSpriteNode(imageNamed: "backgroundPhoto")
         bg.size.height = size.height
         bg.size.width = size.width
@@ -53,7 +53,6 @@ class GameScene: SKScene {
         smallPiece = tileHeight.round(nearest: 0.5)
         midPiece = (tileHeight + tabSize).round(nearest: 0.5)
         bigPiece = (tileHeight + tabSize * 2).round(nearest: 0.5)
-        print("smallPiece =\(smallPiece) midPiece =\(midPiece) bigPiece =\(bigPiece) tabsize =\(tabSize) ")
 
         setImage()
         
@@ -66,13 +65,7 @@ class GameScene: SKScene {
                     for column in (0..<hCount).reversed() {
                         
                         let puzzleElement = puzzleElements[row][column]
-                        //self.tiles.append(puzzleElement.image)
                         self.tiles.append(self.centreTile(tile:puzzleElement, row: row, column: column))
-                        //self.points.append(CGPoint(x: puzzleElement.position.x, y: puzzleElement.position.y))
-                        print("\(row), \(column)  -  H:\(puzzleElement.image.size.height), W:\(puzzleElement.image.size.width)")
-                        
-                        //self.points.append(CGPoint(x: puzzleElement.position.x + 10, y: puzzleElement.position.y + self.size.height - self.size.width))
-                        
                         self.points.append(CGPoint(x: self.tileWidth * 0.5 + self.tileWidth * CGFloat(column) + 10, y: self.size.height - 10 - self.tileHeight * CGFloat(row) - self.tileHeight * 0.5))
                     }
                 }
@@ -93,67 +86,48 @@ class GameScene: SKScene {
         let img = tile.image
         let sz = tile.image.size
         
-        print("----------------------------")
 
         // check width
         if (approximate(num: sz.width, target: smallPiece, off: 5)){
-            print("Small Width")
             xOff += tabSize
         }
         if approximate(num: sz.width, target: bigPiece, off: 5) {
-            print("Big Width")
         }
         if approximate(num: sz.width, target: midPiece, off: 5){
             
             // 0 is transparent, 1 is not transparent
             let a = img.getPixelAlpha(pos: CGPoint(x: 3, y: tabSize * 2))
             
-            print("Mid Width : Left Point = \(a)")
             if column == 0{
-                print(" - Col = 0")
                 xOff += tabSize
             }
             else if a != 0{
-                print(" - No tab on left")
                 xOff += tabSize
             }
         }
         // check height
         if (approximate(num: sz.height, target: smallPiece, off: 5)){
-            print("Small Height")
             yOff += tabSize
         }
         if approximate(num: sz.height, target: bigPiece, off: 5) {
-            print("Big Height")
         }
         if approximate(num: sz.height, target: midPiece, off: 5){
             
             let a = img.getPixelAlpha(pos: CGPoint(x: tabSize * 2, y: 3))
             
-            print("Mid Height : Top Point = \(a)")
             if row == 0{
-                print(" - Row = 0")
                 yOff += tabSize
             }
             else if a != 0{
-                print(" - No tab on top")
                 yOff += tabSize
             }
             
         }
-        var zero = img.getPixelAlpha(pos: CGPoint(x:3, y: 3))
-        print("zero: \(zero)" )
-        print("xOff: \(xOff), yOff: \(yOff)")
         
         UIGraphicsBeginImageContextWithOptions(CGSize(width:bigPiece, height:bigPiece),false, 0)
         
         img.draw(in: CGRect(x: xOff, y: yOff, width: sz.width, height: sz.height))
         
-        let box = UIImage(color: UIColor.green, size: CGSize(width: 1, height: 1))
-        box?.draw(at: CGPoint(x: xOff + 5, y: tabSize * 2 + yOff))
-        box?.draw(at: CGPoint(x: xOff + tabSize * 2, y: 3 + yOff))
-        
-
         let tmpImg = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return tmpImg!
@@ -285,28 +259,27 @@ class GameScene: SKScene {
     }*/
     
     func drawPieces(){
-        let time = UInt32(NSDate().timeIntervalSinceReferenceDate)
-        srand48(Int(time))
+        //let time = UInt32(NSDate().timeIntervalSinceReferenceDate)
+        //srand48(Int(time))
         for k in 0..<Int(hCount * wCount) {
             let s = SKSpriteNode(texture: SKTexture(image: pieces[k].image.image))
-            //s.size = CGSize(width: tileWidth, height: tileHeight)
             s.name = "\(k)"
             
+            // problem with ipads where pieces go off screen, this forces them on screen
             var fix : CGFloat = 0
-            if size.height - size.width < size.width * 0.5{
-                fix = size.width * 0.5
+            if (size.height - size.width) * 0.75 < tileHeight{
+                fix = tileHeight
             }
             
             // put the pieces in random positions in the bottom box
-            //s.position = CGPoint(x: CGFloat(arc4random_uniform(UInt32(size.width - tileWidth)) + UInt32(tileWidth * 0.5)), y: CGFloat(arc4random_uniform(UInt32((size.height - size.width) * 0.75 + fix - tileHeight)) + UInt32(tileHeight * 0.5 + (size.height - size.width) * 0.25) + 10))
-            s.position = pieces[k].image.point
-            //s.anchorPoint = CGPoint(x: 0, y: 0)
-            
+            s.position = CGPoint(x: CGFloat(arc4random_uniform(UInt32(size.width - tileWidth)) + UInt32(tileWidth * 0.5)), y: CGFloat(arc4random_uniform(UInt32((size.height - size.width) * 0.75 - tileHeight + fix)) + UInt32(tileHeight * 0.5 + (size.height - size.width) * 0.25)))
+            s.physicsBody = SKPhysicsBody(texture: s.texture!, size: (s.texture?.size())!)
+            s.physicsBody?.isDynamic = false
             pieces[k].sprite = s
             addChild(pieces[k].sprite!)
             
             // put the pieces in random rotations
-            //pieces[k].rotation = Int(arc4random_uniform(3))
+            pieces[k].rotation = Int(arc4random_uniform(3))
             let rotate = SKAction.rotate(byAngle:  CGFloat(pieces[k].rotation) * 1.5707963268, duration: 0)
             pieces[k].sprite?.run(rotate)
         }
@@ -333,10 +306,6 @@ class GameScene: SKScene {
             if pieces[i].sprite == sprite{
                 let p = pieces[i]
                 pieces.remove(at: i)
-                /*for j in i...pieces.count - 2{
-                    pieces[j] = pieces[j + 1]
-                }
-                pieces[pieces.count - 1] = p*/
                 pieces.append(p)
                 p.sprite?.zPosition = zPos
                 zPos += tinyNum
@@ -351,20 +320,25 @@ class GameScene: SKScene {
         if let touch = touches.first {
             let location = touch.location(in: self)
             print("\(location)")
-            for i in stride(from: pieces.count - 1, to: -1, by: -1){
-                if (pieces[i].sprite?.contains(location) == true && touch.tapCount == 1 ) {
-                    //print("Bring to Front")
-                    moveableNode = bringToFront(sprite: pieces[i].sprite!)
+            
+            let node = scene?.physicsWorld.body(at: location)?.node
+            if node != nil{
+                // pick up if single tap
+                if (touch.tapCount == 1 ) {
+                    //bring held piece to the front
+                    moveableNode = bringToFront(sprite: node as! SKSpriteNode)
                     moveableNode!.position = location
-                    break;
                 }
-                else if (pieces[i].sprite?.contains(location) == true && touch.tapCount == 2 ) {
-                    pieces[i].rotation = (pieces[i].rotation + 1) % 4
-                    let rotate = SKAction.rotate(byAngle: 1.5707963268, duration: 0.25)
-                    pieces[i].sprite?.run(rotate)
-                    break;
+                // rotate if double tap
+                else if (touch.tapCount == 2 ) {
+                    for i in stride(from: pieces.count - 1, to: -1, by: -1){
+                        if pieces[i].sprite == node{
+                            pieces[i].rotation = (pieces[i].rotation + 1) % 4
+                            let rotate = SKAction.rotate(byAngle: 1.5707963268, duration: 0.25)
+                            pieces[i].sprite?.run(rotate)
+                        }
+                    }
                 }
-
             }
         }
     }
@@ -377,16 +351,18 @@ class GameScene: SKScene {
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first{
-            // if piece
+            // check if piece
             if moveableNode != nil{
                 moveableNode!.position = touch.location(in: self)
+                // loop through all grid positions to check if the piece is in one of them
                 for p in pieces{
                     let node = p.image.point
                     if moveableNode!.contains(node){
                         var overlap : Bool = false
+                        // check if overlapping with another piece, if so, do not snap
                         for s in pieces{
                             if (s.sprite?.contains(node)) == true && s.sprite != moveableNode{
-                                //overlap = true;
+                                overlap = true;
                                 break;
                             }
                         }
@@ -396,19 +372,21 @@ class GameScene: SKScene {
                         }
                     }
                 }
-                //moveableNode!.zPosition = 0.0
                 moveableNode = nil
             }
             // if button
             else{
                 let touchLocation = touch.location(in: self)
                 
+                // reset screen if resetbutton pressed
                 if (resetButton.contains(touchLocation)) {
                     if let viewWithTag = self.view?.viewWithTag(105) {
                         viewWithTag.removeFromSuperview()
                     }
                     reset()
+                    drawPieces()
                 }
+                // go to main menu if back pressed
                 if (backButton.contains(touchLocation)) {
                     if let viewWithTag = self.view?.viewWithTag(103) {
                         viewWithTag.removeFromSuperview()
@@ -423,11 +401,10 @@ class GameScene: SKScene {
                     image = UIImage(named: "defaultPhoto")
                     let scene = MenuScene(size: size)
                     scene.scaleMode = scaleMode
-                    //let transition = SKTransition.moveIn(with: .right, duration: 1)
                     self.view?.presentScene(scene)//, transition: transition)
                 }
             }
-                        // check correct
+            // check for puzzle completion
             if checkCorrect(){
                 doneMessage.backgroundColor = UIColor.clear
                 doneMessage.text = "Puzzle Complete!"

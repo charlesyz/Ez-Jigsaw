@@ -33,21 +33,6 @@ extension UIImage {
 }
 
 extension UIImage {
-    /*func getPixelColor(point: CGPoint) -> UIColor {
-        
-        let pixelData = self.cgImage!.dataProvider!.data
-        let data: UnsafePointer<UInt8> = CFDataGetBytePtr(pixelData)
-        
-        let pixelInfo: Int = ((Int(self.size.width) * Int(point.y)) + Int(point.x)) * 4
-        
-        let r = CGFloat(data[pixelInfo]) / CGFloat(255.0)
-        let g = CGFloat(data[pixelInfo+1]) / CGFloat(255.0)
-        let b = CGFloat(data[pixelInfo+2]) / CGFloat(255.0)
-        let a = CGFloat(data[pixelInfo+3]) / CGFloat(255.0)
-        
-        return UIColor(red: r, green: g, blue: b, alpha: a)
-        
-    }*/
     func getPixelColor(point: CGPoint) -> UIColor {
         let cgImage = self.cgImage
         
@@ -90,6 +75,27 @@ extension UIImage {
     
 }
 
+extension UIColor {
+    convenience init(hex: String) {
+        let scanner = Scanner(string: hex)
+        scanner.scanLocation = 0
+        
+        var rgbValue: UInt64 = 0
+        
+        scanner.scanHexInt64(&rgbValue)
+        
+        let r = (rgbValue & 0xff0000) >> 16
+        let g = (rgbValue & 0xff00) >> 8
+        let b = rgbValue & 0xff
+        
+        self.init(
+            red: CGFloat(r) / 0xff,
+            green: CGFloat(g) / 0xff,
+            blue: CGFloat(b) / 0xff, alpha: 1
+        )
+    }
+}
+
 public extension UIImage {
     public convenience init?(color: UIColor, size: CGSize = CGSize(width: 1, height: 1)) {
         let rect = CGRect(origin: .zero, size: size)
@@ -116,15 +122,3 @@ extension CGFloat {
         return intDiv * nearest
     }
 }
-
-
-/*extension SKSpriteNode {
-    func bringToFront() {
-        guard let parent = parent else {
-            print("No Parent")
-            return
-        }
-        self.removeFromParent()
-        parent.addChild(self)
-    }
-}*/

@@ -13,7 +13,6 @@ struct Piece{
     var rotation : Int
     var sprite : SKSpriteNode?
     var image = (image: UIImage(), point: CGPoint())
-    
     init() {
         rotation = 0;
         sprite = nil
