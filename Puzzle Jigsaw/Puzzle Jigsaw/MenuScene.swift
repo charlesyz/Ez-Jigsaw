@@ -201,7 +201,6 @@ class MenuScene: SKScene , UIImagePickerControllerDelegate, UINavigationControll
         image = info[UIImagePickerControllerOriginalImage] as? UIImage
         controller.dismiss(animated: false, completion: nil)
         image = cropSquare(image: image!)
-        initObjects()
         imageButton.texture = SKTexture(image: image!)
     }
     

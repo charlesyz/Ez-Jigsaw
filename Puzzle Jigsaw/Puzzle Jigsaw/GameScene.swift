@@ -56,7 +56,6 @@ class GameScene: SKScene {
 
         setImage()
         
-        
         let puzzleMaker = PuzzleMaker(image: image!, numRows: wCount, numColumns: hCount)
         puzzleMaker.generatePuzzles { (throwableClosure) in
             do {
@@ -141,6 +140,8 @@ class GameScene: SKScene {
     }
     
     func setImage(){
+        // Get the superview's layout
+        let margins = view?.layoutMarginsGuide
         
         let s = SKSpriteNode()
         s.color = highlightColour
@@ -173,6 +174,10 @@ class GameScene: SKScene {
         resetLabel.frame = CGRect(x: 10, y: size.height - 20 - (size.height - size.width) * 0.125 ,width: size.width * 0.5 - 20, height: 20)
         resetLabel.textAlignment = NSTextAlignment.center
         self.view?.addSubview(resetLabel)
+        resetLabel.leadingAnchor.constraint(equalTo: (margins?.leadingAnchor)!, constant: 0).isActive = true
+        resetLabel.topAnchor.constraint(equalTo: (margins?.topAnchor)!, constant: size.height - 20 - (size.height - size.width) * 0.125).isActive = true
+        resetLabel.widthAnchor.constraint(equalToConstant: size.width * 0.5 - 20).isActive = true
+        resetLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
         
         backLabel.backgroundColor = UIColor.clear
         backLabel.text = "Back"
@@ -182,7 +187,11 @@ class GameScene: SKScene {
         backLabel.frame = CGRect(x: size.width * 0.5 + 10, y: size.height - 20 - (size.height - size.width) * 0.125,width: size.width * 0.5 - 20, height: 20)
         backLabel.textAlignment = NSTextAlignment.center
         self.view?.addSubview(backLabel)
-
+        backLabel.leadingAnchor.constraint(equalTo: (margins?.leadingAnchor)!, constant: size.width * 0.5).isActive = true
+        backLabel.topAnchor.constraint(equalTo: (margins?.topAnchor)!, constant: size.height - 20 - (size.height - size.width) * 0.125).isActive = true
+        backLabel.widthAnchor.constraint(equalToConstant: size.width * 0.5 - 20).isActive = true
+        backLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        
     }
     
     func reset(){
@@ -204,7 +213,7 @@ class GameScene: SKScene {
     }
 
     
-
+    // old crop to squares function
     /*func cropImage(image: UIImage) -> ([UIImage], [CGPoint]) {
         var tiles:[UIImage] = []
         var points:[CGPoint] = []
@@ -273,6 +282,7 @@ class GameScene: SKScene {
             
             // put the pieces in random positions in the bottom box
             s.position = CGPoint(x: CGFloat(arc4random_uniform(UInt32(size.width - tileWidth)) + UInt32(tileWidth * 0.5)), y: CGFloat(arc4random_uniform(UInt32((size.height - size.width) * 0.75 - tileHeight + fix)) + UInt32(tileHeight * 0.5 + (size.height - size.width) * 0.25)))
+        //s.position = pieces[k].image.point
             s.physicsBody = SKPhysicsBody(texture: s.texture!, size: (s.texture?.size())!)
             s.physicsBody?.isDynamic = false
             pieces[k].sprite = s
@@ -351,6 +361,27 @@ class GameScene: SKScene {
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first{
+            // check for puzzle completion
+            if checkCorrect(){
+                
+                // Get the superview's layout
+                let margins = view?.layoutMarginsGuide
+                // print done message
+                self.view?.addSubview(doneMessage)
+                doneMessage.backgroundColor = UIColor.clear
+                doneMessage.text = "Puzzle Complete!"
+                doneMessage.font = doneMessage.font.withSize(30)
+                doneMessage.textColor = textColour
+                doneMessage.translatesAutoresizingMaskIntoConstraints = false
+                doneMessage.tag = 105
+                doneMessage.frame = CGRect(x: 10, y: size.width + 10,width: size.width - 20, height: 40)
+                doneMessage.textAlignment = NSTextAlignment.center
+                doneMessage.leadingAnchor.constraint(equalTo: (margins?.leadingAnchor)!, constant: 10).isActive = true
+                doneMessage.topAnchor.constraint(equalTo: (margins?.topAnchor)!, constant: size.width + 10).isActive = true
+                doneMessage.widthAnchor.constraint(equalToConstant: size.width - 20).isActive = true
+                doneMessage.heightAnchor.constraint(equalToConstant: 40).isActive = true
+            }
+            
             // check if piece
             if moveableNode != nil{
                 moveableNode!.position = touch.location(in: self)
@@ -402,20 +433,10 @@ class GameScene: SKScene {
                     let scene = MenuScene(size: size)
                     scene.scaleMode = scaleMode
                     self.view?.presentScene(scene)//, transition: transition)
+                    
                 }
             }
-            // check for puzzle completion
-            if checkCorrect(){
-                doneMessage.backgroundColor = UIColor.clear
-                doneMessage.text = "Puzzle Complete!"
-                doneMessage.font = doneMessage.font.withSize(30)
-                doneMessage.textColor = textColour
-                doneMessage.translatesAutoresizingMaskIntoConstraints = false
-                doneMessage.tag = 105
-                doneMessage.frame = CGRect(x: 10, y: size.width + 10,width: size.width - 20, height: 40)
-                doneMessage.textAlignment = NSTextAlignment.center
-                self.view?.addSubview(doneMessage)
-            }
+            
         }
         
         
