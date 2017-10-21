@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AE3E55101F1550F900956B7B"
-               BuildableName = "Puzzle Jigsaw.app"
+               BuildableName = "EzJigsaw.app"
                BlueprintName = "Puzzle Jigsaw"
                ReferencedContainer = "container:Puzzle Jigsaw.xcodeproj">
             </BuildableReference>
@@ -44,7 +44,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AE3E55101F1550F900956B7B"
-            BuildableName = "Puzzle Jigsaw.app"
+            BuildableName = "EzJigsaw.app"
             BlueprintName = "Puzzle Jigsaw"
             ReferencedContainer = "container:Puzzle Jigsaw.xcodeproj">
          </BuildableReference>
@@ -68,7 +68,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AE3E55101F1550F900956B7B"
-            BuildableName = "Puzzle Jigsaw.app"
+            BuildableName = "EzJigsaw.app"
             BlueprintName = "Puzzle Jigsaw"
             ReferencedContainer = "container:Puzzle Jigsaw.xcodeproj">
          </BuildableReference>
@@ -87,7 +87,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AE3E55101F1550F900956B7B"
-            BuildableName = "Puzzle Jigsaw.app"
+            BuildableName = "EzJigsaw.app"
             BlueprintName = "Puzzle Jigsaw"
             ReferencedContainer = "container:Puzzle Jigsaw.xcodeproj">
          </BuildableReference>

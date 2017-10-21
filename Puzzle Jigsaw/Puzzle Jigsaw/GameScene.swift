@@ -95,7 +95,7 @@ class GameScene: SKScene {
         if approximate(num: sz.width, target: midPiece, off: 5){
             
             // 0 is transparent, 1 is not transparent
-            let a = img.getPixelAlpha(pos: CGPoint(x: 3, y: tabSize * 2))
+            let a = img.getPixelAlpha(pos: CGPoint(x: 1, y: tabSize * 2))
             
             if column == 0{
                 xOff += tabSize
@@ -112,7 +112,7 @@ class GameScene: SKScene {
         }
         if approximate(num: sz.height, target: midPiece, off: 5){
             
-            let a = img.getPixelAlpha(pos: CGPoint(x: tabSize * 2, y: 3))
+            let a = img.getPixelAlpha(pos: CGPoint(x: tabSize * 2, y: 1))
             
             if row == 0{
                 yOff += tabSize
