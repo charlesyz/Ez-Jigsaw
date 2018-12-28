@@ -52,7 +52,7 @@ class MenuScene: SKScene , UIImagePickerControllerDelegate, UINavigationControll
         initObjects()
     }
     
-    func sliderValueDidChange(sender:UISlider!){
+    @objc func sliderValueDidChange(sender:UISlider!){
         hCount = Int(sender.value)
         wCount = Int(sender.value)
         sliderLabel.text = "Dimensions: \(hCount) x \(wCount)"
@@ -78,23 +78,38 @@ class MenuScene: SKScene , UIImagePickerControllerDelegate, UINavigationControll
     }
     
     func initObjects(){
-        let buttonHeight = (size.height - size.width ) * 0.5 - 70
+        
+        var hasTopNotch: Bool {
+            if #available(iOS 11.0,  *) {
+                return UIApplication.shared.delegate?.window??.safeAreaInsets.top ?? 0 > 20
+            }
+            return false
+        }
+        
+        var margin: CGFloat = 0
+        var offset: CGFloat = 0
+        if hasTopNotch{
+            margin = 50
+            offset = 0.1
+        }
+        let buttonHeight = (size.height - size.width ) * 0.5 - 70 - margin
         let buttonWidth = size.width - 50
         // Get the superview's layout
         let margins = view?.layoutMarginsGuide
         
+        
         imageButton = SKSpriteNode(texture: SKTexture(image: image!))
         imageButton.color = buttonColour
-        imageButton.size = CGSize(width: size.width - 20, height: size.width - 20)
+        imageButton.size = CGSize(width: size.width - 20, height: size.width - 20 )
         imageButton.position = CGPoint(x: size.width * 0.5 , y: size.height - size.width + 10)
-        imageButton.anchorPoint = CGPoint(x: 0.5, y: 0)
+        imageButton.anchorPoint = CGPoint(x: 0.5, y: offset)
         imageButton.name = "imageButton"
         self.addChild(imageButton)
         
         startButton = SKSpriteNode()
         startButton.color = buttonColour
         startButton.size = CGSize(width: buttonWidth, height: buttonHeight)
-        startButton.position = CGPoint(x: size.width * 0.5, y: size.height - size.width - 10)
+        startButton.position = CGPoint(x: size.width * 0.5, y: size.height - size.width - 10 - margin * 4/5)
         startButton.anchorPoint = CGPoint(x: 0.5, y: 1)
         startButton.name = "startButton"
         self.addChild(startButton)
@@ -115,7 +130,7 @@ class MenuScene: SKScene , UIImagePickerControllerDelegate, UINavigationControll
         helpButton = SKSpriteNode()//texture: SKTexture(image: image!))
         helpButton.color = buttonColour
         helpButton.size = CGSize(width: buttonWidth, height: buttonHeight)
-        helpButton.position = CGPoint(x: size.width * 0.5, y: size.height - size.width - 20 - buttonHeight)
+        helpButton.position = CGPoint(x: size.width * 0.5, y: size.height - size.width - 20  - margin * 4/5 - buttonHeight)
         helpButton.anchorPoint = CGPoint(x: 0.5, y: 1)
         helpButton.name = "startButton"
         self.addChild(helpButton)
@@ -152,7 +167,7 @@ class MenuScene: SKScene , UIImagePickerControllerDelegate, UINavigationControll
         sliderLabel.frame = CGRect(x: 20, y: size.height - 100 ,width: buttonWidth, height: 50)
         sliderLabel.textAlignment = NSTextAlignment.center
         sliderLabel.leadingAnchor.constraint(equalTo: (margins?.leadingAnchor)!, constant: 10).isActive = true
-        sliderLabel.topAnchor.constraint(equalTo: (margins?.topAnchor)!, constant: size.height - 100).isActive = true
+        sliderLabel.topAnchor.constraint(equalTo: (margins?.topAnchor)!, constant: size.height - 100 - margin).isActive = true
         sliderLabel.widthAnchor.constraint(equalToConstant: buttonWidth).isActive = true
         sliderLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true
     }

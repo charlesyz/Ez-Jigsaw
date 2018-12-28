@@ -35,8 +35,11 @@ class GameScene: SKScene {
     var points:[CGPoint] = []
     var pieces = [Piece]()
     
+    var margin: CGFloat = 0
+    
     
     override func didMove(to view: SKView) {
+        
         // set background
         let bg = SKSpriteNode(imageNamed: "backgroundPhoto")
         bg.size.height = size.height
@@ -65,7 +68,7 @@ class GameScene: SKScene {
                         
                         let puzzleElement = puzzleElements[row][column]
                         self.tiles.append(self.centreTile(tile:puzzleElement, row: row, column: column))
-                        self.points.append(CGPoint(x: self.tileWidth * 0.5 + self.tileWidth * CGFloat(column) + 10, y: self.size.height - 10 - self.tileHeight * CGFloat(row) - self.tileHeight * 0.5))
+                        self.points.append(CGPoint(x: self.tileWidth * 0.5 + self.tileWidth * CGFloat(column) + 10, y: self.size.height - 10 - self.tileHeight * CGFloat(row) - self.tileHeight * 0.5 - self.margin))
                     }
                 }
             } catch let error {
@@ -143,25 +146,39 @@ class GameScene: SKScene {
         // Get the superview's layout
         let margins = view?.layoutMarginsGuide
         
+        var offset: CGFloat = 0
+        var hasTopNotch: Bool {
+            if #available(iOS 11.0,  *) {
+                return UIApplication.shared.delegate?.window??.safeAreaInsets.top ?? 0 > 20
+            }
+            return false
+        }
+        
+        if hasTopNotch{
+            margin = 50
+            offset = 0.1
+        }
+        
+        
         let s = SKSpriteNode()
         s.color = highlightColour
         s.size = CGSize(width: size.width - 18, height: size.width - 18)
         s.position = CGPoint(x: size.width * 0.5 , y: size.height - size.width + 9)
-        s.anchorPoint = CGPoint(x: 0.5, y: 0)
+        s.anchorPoint = CGPoint(x: 0.5, y: offset)
         addChild(s)
         
         resetButton = SKSpriteNode()
         resetButton.color = buttonColour
-        resetButton.size = CGSize(width: size.width * 0.5 - 20, height: (size.height - size.width) * 0.25)
-        resetButton.position = CGPoint(x: 10, y: 10)
+        resetButton.size = CGSize(width: size.width * 0.5 - 20, height: (size.height - size.width) * 0.25 - margin / 2)
+        resetButton.position = CGPoint(x: 10, y: 10 + margin / 2)
         resetButton.anchorPoint = CGPoint(x: 0, y: 0)
         resetButton.name = "resetButton"
         self.addChild(resetButton)
         
         backButton = SKSpriteNode()//texture: SKTexture(image: image!))
         backButton.color = buttonColour
-        backButton.size = CGSize(width: size.width * 0.5 - 20, height: (size.height - size.width) * 0.25)
-        backButton.position = CGPoint(x: size.width * 0.5 + 10, y: 10)
+        backButton.size = CGSize(width: size.width * 0.5 - 20, height: (size.height - size.width) * 0.25 - margin / 2)
+        backButton.position = CGPoint(x: size.width * 0.5 + 10, y: 10 + margin / 2)
         backButton.anchorPoint = CGPoint(x: 0, y: 0)
         backButton.name = "backButton"
         self.addChild(backButton)
@@ -175,7 +192,7 @@ class GameScene: SKScene {
         resetLabel.textAlignment = NSTextAlignment.center
         self.view?.addSubview(resetLabel)
         resetLabel.leadingAnchor.constraint(equalTo: (margins?.leadingAnchor)!, constant: 0).isActive = true
-        resetLabel.topAnchor.constraint(equalTo: (margins?.topAnchor)!, constant: size.height - 20 - (size.height - size.width) * 0.125).isActive = true
+        resetLabel.topAnchor.constraint(equalTo: (margins?.topAnchor)!, constant: size.height - 20 - margin - (size.height - size.width) * 0.125).isActive = true
         resetLabel.widthAnchor.constraint(equalToConstant: size.width * 0.5 - 20).isActive = true
         resetLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
         
@@ -184,11 +201,11 @@ class GameScene: SKScene {
         backLabel.textColor = textColour
         backLabel.translatesAutoresizingMaskIntoConstraints = false
         backLabel.tag = 104
-        backLabel.frame = CGRect(x: size.width * 0.5 + 10, y: size.height - 20 - (size.height - size.width) * 0.125,width: size.width * 0.5 - 20, height: 20)
+        backLabel.frame = CGRect(x: size.width * 0.5 + 10, y: size.height - 20 - (size.height - size.width) * 0.125 ,width: size.width * 0.5 - 20, height: 20)
         backLabel.textAlignment = NSTextAlignment.center
         self.view?.addSubview(backLabel)
         backLabel.leadingAnchor.constraint(equalTo: (margins?.leadingAnchor)!, constant: size.width * 0.5).isActive = true
-        backLabel.topAnchor.constraint(equalTo: (margins?.topAnchor)!, constant: size.height - 20 - (size.height - size.width) * 0.125).isActive = true
+        backLabel.topAnchor.constraint(equalTo: (margins?.topAnchor)!, constant: size.height - 20 - margin - (size.height - size.width) * 0.125).isActive = true
         backLabel.widthAnchor.constraint(equalToConstant: size.width * 0.5 - 20).isActive = true
         backLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
         

@@ -1,12 +1,16 @@
 PODS:
-  - PuzzleMaker (1.0.4)
+  - PuzzleMaker (1.1.0)
 
 DEPENDENCIES:
   - PuzzleMaker
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - PuzzleMaker
+
 SPEC CHECKSUMS:
-  PuzzleMaker: 990ff4d6e926561254b331d0f37f28e98f683701
+  PuzzleMaker: 2bbae2e0e9c36512707622fec23212c5e99a305a
 
-PODFILE CHECKSUM: 1e550c61c0bcb937edabca05a7cf4f2ba482b3fc
+PODFILE CHECKSUM: f964f31965b1448c6c02e0c13250f099c8b5befb
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.5.3
